@@ -274,7 +274,9 @@ class MeiRiXiaoZhuPlugin(Star):
         pool = fresh if fresh else candidates
         return random.choice(pool)
 
-    @filter.command("每日小猪", alias={"抽小猪", "我的小猪", "meirixiaozhu"})
+    @filter.regex(r"今日小猪|每日小猪")
+    @filter.event_message_type(filter.EventMessageType.GROUP_MESSAGE)
+    @filter.platform_adapter_type(filter.PlatformAdapterType.AIOCQHTTP)
     async def roll_pig(self, event: AstrMessageEvent):
         today_str = datetime.date.today().isoformat()
         user_id = event.get_sender_id()
