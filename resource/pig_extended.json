@@ -1,0 +1,1766 @@
+[
+  {
+    "id": "human",
+    "name": "人类",
+    "description": "问号脸，查无此猪",
+    "analysis": "你顶着一张系统默认头像，脸上打着大大的问号，任凭猪脸识别怎么扫都扫不出半点猪味。恭喜你成功混进猪圈当卧底，唯一的破绽是——你好像真的是个人。",
+    "image": "resource/image/human.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "pig",
+    "name": "猪",
+    "description": "标准猪，别无分店",
+    "analysis": "你是猪圈里的出厂默认款，粉嫩、四脚齐全、尾巴打个卷，没有任何多余设定。虽然平平无奇到容易被忽略，但整个猪圈的审美标准，其实都是照着你画的。",
+    "image": "resource/image/pig.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "black-pig",
+    "name": "小黑猪",
+    "description": "黑到卤过头了",
+    "analysis": "你从头黑到蹄，活像在卤锅里多泡了三个钟头。别的猪担心晒黑，你担心的是被端上桌配蒜泥——但这一身高级的黑，猪圈里可没几只压得住。",
+    "image": "resource/image/black-pig.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "wild-boar",
+    "name": "野猪",
+    "description": "獠牙已就位",
+    "analysis": "你獠牙外露、鬃毛炸开，一看就不是猪圈里那些养尊处优的软脚猪。别人还在泥坑里打滚，你已经在山里横着走了——谁敢惹你，先问问那对獠牙同不同意。",
+    "image": "resource/image/wild-boar.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "zhuge-liang",
+    "name": "猪葛亮",
+    "description": "羽扇纶巾（猪版）",
+    "analysis": "你戴着乌纱、留着一把仙风道骨的长须，硬是把一张猪脸盘出了运筹帷幄的气场。猪圈里但凡有点难题都来找你，虽然你的锦囊十次有八次是「先睡一觉再说」，但剩下两次是真的准。",
+    "image": "resource/image/zhuge-liang.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "pig-stamp",
+    "name": "猪圆章",
+    "description": "盖章认证的正版好猪",
+    "analysis": "你头顶那块方方正正的黑印章，是猪圈官方盖章认证的正版好猪。别的猪办事全凭一张嘴，你办事讲究白纸黑字盖个戳——凡是你按过章的，猪圈里没有不认的。",
+    "image": "resource/image/pig-stamp.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "zombie-pig",
+    "name": "僵尸猪",
+    "description": "脑子？还有吗？",
+    "analysis": "你一身腐绿、缝着补丁、一只眼睛缝成了叉，走起路来一瘸一拐还往下掉渣。别的猪怕被做成红烧肉，你倒好，做梦都惦记着啃口新鲜猪脑——毕竟自己那颗，早就不太够用了。",
+    "image": "resource/image/zombie-pig.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "skeleton-pig",
+    "name": "骷髅猪",
+    "description": "资深不死族",
+    "analysis": "你连膘都没剩下，只剩一副白骨还倔强地摆出猪的形状。红烧、爆炒、清蒸全套流程走完依旧屹立不倒，堪称猪圈里资历最老的不死族——毕竟能瘦成这样，也是种本事。",
+    "image": "resource/image/skeleton-pig.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "pig-human",
+    "name": "猪人",
+    "description": "你是猪还是人？",
+    "analysis": "你顶着一张标准猪脸，下面却接了副人类的肩膀，穿得人模人样。开会时像个正经打工人，一到饭点就露馅——这具身体到底听猪的还是听人的，连你自己都没想明白。",
+    "image": "resource/image/pig-human.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "demon-pig",
+    "name": "恶魔猪",
+    "description": "满肚子坏心眼",
+    "analysis": "你浑身赤红，顶着一对小恶魔犄角，背上还支棱着蝙蝠翅膀，一看就没憋什么好主意。表面人畜无害地哼哼，背地里的坏点子能装满一整个猪圈——但那副得逞的坏笑，偏偏还挺讨喜。",
+    "image": "resource/image/demon-pig.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "heaven-pig",
+    "name": "天堂猪",
+    "description": "似了喵~",
+    "analysis": "你头顶金圈、背生双翼，一副刚领完盒饭飞升的模样。猪生在世大风大浪都扛过来了，最后栽在一句「似了喵」——好在当天使这活儿，看你现在飘得还挺自在。",
+    "image": "resource/image/heaven-pig.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "explosive-pig",
+    "name": "爆破小猪",
+    "description": "我跟你爆了！",
+    "analysis": "你背着一捆滋滋冒火星的炸药，眉头拧成了怒气值拉满的样子，随时准备跟谁同归于尽。平时看着凶，其实引线短、脾气爆——惹到你的下场只有一个字：轰。",
+    "image": "resource/image/explosive-pig.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "black-white-pig",
+    "name": "黑白猪",
+    "description": "血统成谜的拼装款",
+    "analysis": "你半边黑半边白，活像两只猪拼装出厂，血统成谜。有猪说你是熊猫混的，有猪说你是奶牛的亲戚，你自己也懒得解释——反正这一身黑白配色，猪圈里独一份。",
+    "image": "resource/image/black-white-pig.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "pork-skewer",
+    "name": "猪肉串",
+    "description": "真正的串子",
+    "analysis": "你是被竹签一穿到底的正宗串子，肉块中间还夹着青椒装点门面。别的猪自称串子只是玩梗，你是真真切切被串起来的那个——从头到脚，都透着一股烤熟前的香。",
+    "image": "resource/image/pork-skewer.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "magic-pig",
+    "name": "魔法少猪",
+    "description": "马猪烧酒，变身！",
+    "analysis": "你系着粉红蝴蝶结，蹄子上举着颗星星魔杖，一副魔法少女临时出道的架势。口号喊得响亮，变身动作也做足了，就是施出来的法术十次有九次是把饲料变多了一点——但可爱就够了。",
+    "image": "resource/image/magic-pig.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "mechanical-pig",
+    "name": "机械猪",
+    "description": "人机，如假包换",
+    "analysis": "你一身金属外壳、红色光学眼、四条机械腿，走起来嗡嗡作响。群里骂谁「人机」你都对号入座，因为你是真·机器——运算精准、从不摸鱼，唯一的bug是偶尔忘了自己其实是只猪。",
+    "image": "resource/image/mechanical-pig.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "pig-ball",
+    "name": "猪猪球",
+    "description": "滚了",
+    "analysis": "你被揉成了一颗浑圆的球，四肢全无、只剩一张猪脸，一推就能滚出老远。别的猪讲究站有站相，你的世界里只有一个动词——滚。省事，还挺快乐。",
+    "image": "resource/image/pig-ball.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "doll-pig",
+    "name": "玩偶猪",
+    "description": "fufu小猪",
+    "analysis": "你是一针一线缝出来的手作猪玩偶，布面软乎、针脚清晰可见，身上还挂着「Hand Made」的小标。摸起来治愈，抱起来安心——就是千万别沾水，你怕缩水。",
+    "image": "resource/image/doll-pig.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "soul-pig",
+    "name": "灵魂猪",
+    "description": "从冥界归来的猪",
+    "analysis": "你半透明泛着幽绿，下半身化成一缕飘忽的鬼影，一看就是刚从冥界溜达回来的。生前的事你记不太清了，只记得还有顿饲料没吃完——放不下的这点执念，把你又勾回了猪圈。",
+    "image": "resource/image/soul-pig.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "crystal-pig",
+    "name": "水晶猪",
+    "description": "珍贵又脆弱的小猪",
+    "analysis": "你通体由水晶切割而成，棱面折射着彩虹光，美得像件展柜里的收藏品。珍贵是真珍贵，就是也真的脆——别的猪拍你一下是打招呼，拍你一下可能就得扫地出门。",
+    "image": "resource/image/crystal-pig.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "snow-pig",
+    "name": "雪猪",
+    "description": "洁白的雪猪",
+    "analysis": "你一身雪白、轮廓干净，像刚从初雪里滚了一圈出来。纤尘不染的样子确实好看，就是往雪地里一趴就彻底找不着了——保护色拉满，存在感清零。",
+    "image": "resource/image/snow-pig.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "pig-cat",
+    "name": "猪咪",
+    "description": "喵一声还是哼一声？",
+    "analysis": "你顶着橘猫的条纹皮、长着猫的胡须，却安了个圆滚滚的猪鼻子，身份错乱得相当彻底。喵一声吧带着哼唧，哼唧一声吧又想蹭饭——猫的傲娇和猪的贪吃，你一样没落下。",
+    "image": "resource/image/pig-cat.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "landmine-pig",
+    "name": "滴泪猪",
+    "description": "喝完这箱就没事了",
+    "analysis": "外表温柔无害，内心情绪细腻浓烈。感情专一却略显沉重，让人想靠近又怕触碰，是可爱又危险的小地雷。",
+    "image": "resource/image/landmine-pig.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "rainbow-pig",
+    "name": "大色猪",
+    "description": "斯图亚特·彩虹猪",
+    "analysis": "像行走的彩虹，存在感强烈又热情直接。你坦率追求美好事物，偶尔显得太热情，但是真诚又有魅力。",
+    "image": "resource/image/rainbow-pig.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "big-lazy-pig",
+    "name": "大懒猪",
+    "description": "能躺着绝不坐着",
+    "analysis": "天生享乐派，追求极致舒适。性格随和不爱压力，总能迅速找到最舒服的位置并安心躺平。",
+    "image": "resource/image/big-lazy-pig.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "pig-turtle",
+    "name": "猪龟",
+    "description": "习惯了就好",
+    "analysis": "你总是背负着沉重的外壳，习惯于在感情中被动退让。为了维持表面的和平，你选择压抑自我，把委屈忍在壳里，却逐渐失去了独立的棱角。",
+    "image": "resource/image/pig-turtle.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "roasted-pig",
+    "name": "烤猪",
+    "description": "生活终于对我下手了",
+    "analysis": "你正处于猪生的“烧烤模式”，承受着来自各方的压力和考验。虽然眼下备受煎熬，但这正是你不惧困难，完成蜕变、变得更加成熟坚韧的过程。",
+    "image": "resource/image/roasted-pig.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "bacon",
+    "name": "培根",
+    "description": "煎熬出精华",
+    "analysis": "你历经锤炼，此刻正处于生活的“煎熬”中。但这正是你释放价值的高光时刻，越是磨砺，你越能散发出不可抗拒的成熟魅力与“真香”实力。",
+    "image": "resource/image/bacon.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "apple-pig",
+    "name": "苹果猪",
+    "description": "贵就是好",
+    "analysis": "你追求精致与品位，享受他人羡慕的目光，却偶尔也会在一堆光鲜亮丽的物质中，感到一丝难以言说的空虚与焦虑。",
+    "image": "resource/image/apple-pig.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "android-pig",
+    "name": "安卓猪",
+    "description": "自由开放，不被定义",
+    "analysis": "你务实接地气，不被华丽标签束缚。比起外在虚荣，你更看重内在的实用与自由，性格包容随和，活得真实自在。",
+    "image": "resource/image/android-pig.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "pig-bun",
+    "name": "猪包",
+    "description": "外软内热，馅料满满",
+    "analysis": "你外表软萌可爱，给人一种温暖的治愈感。就像一个热气腾腾的包子，你的内心藏着丰富的真材实料，善良又真诚，让人忍不住想要靠近。",
+    "image": "resource/image/pig-bun.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "taxi-pig",
+    "name": "出猪车",
+    "description": "生活所迫，使命必达",
+    "analysis": "你是勤劳的“打工人”，每天在城市里奔波。生活虽然忙碌，但你总能可靠地将每一位乘客送达目的地。你的方向盘里，握着的是对生活的责任与担当。",
+    "image": "resource/image/taxi-pig.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "pig-die",
+    "name": "猪骰",
+    "description": "智商随机摇",
+    "analysis": "你外表方正，有时却是个不懂变通的可爱“猪头”。做决定像掷骰子般随性，比起思考更信运气。这份憨直，恰恰是你讨喜的地方。",
+    "image": "resource/image/pig-die.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "watermelon-pig",
+    "name": "西瓜猪",
+    "description": "站在甜蜜巅峰",
+    "analysis": "你懂得享受当下的甜蜜，就像稳稳踩在西瓜上。面对生活的波动，你总能凭乐观心态维持平衡，做一个知足常乐的“吃瓜群众”。",
+    "image": "resource/image/watermelon-pig.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "pig-souffle",
+    "name": "猪芙蕾",
+    "description": "需要轻拿轻放的小甜心",
+    "analysis": "你性格如舒芙蕾般柔软细腻，自带甜美治愈气息。虽然外表软萌，但内心敏感脆弱，需要被温柔呵护，稍不注意可能就会“塌陷”哦。",
+    "image": "resource/image/pig-souffle.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "goblin-pig",
+    "name": "猪布林",
+    "description": "猪布林模式开启",
+    "analysis": "不再在乎外界眼光。你选择随性甚至邋遢地活着，躲在角落里摆烂，享受着不被世俗束缚的另类自在。",
+    "image": "resource/image/goblin-pig.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "chained_crown_pig",
+    "name": "被束缚的猪王",
+    "description": "欲戴王冠，必承其重",
+    "analysis": "你有着高贵的灵魂，却被现实深深束缚。虽身处困境，但你从未放弃对自由的渴望与挣扎。",
+    "image": "resource/image/chained_crown_pig.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "vangogh_pig",
+    "name": "梵高猪",
+    "description": "星夜里的金色印象",
+    "analysis": "你内心如梵高笔下的火焰般热烈，情感丰富且深沉。虽然你的世界有时像星空漩涡般复杂，但你那独特的艺术气质和对生活的热爱是无法掩盖的。",
+    "image": "resource/image/vangogh_pig.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "tangyuan_pig",
+    "name": "黑猪麻汤圆",
+    "description": "泡在甜蜜的暖汤里",
+    "analysis": "你性格软糯甜美，自带治愈气场。外表看似简单，内心却藏着丰富细腻的情感，是给大家带来温暖的小太阳。",
+    "image": "resource/image/tangyuan_pig.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "mc_porkchop",
+    "name": "猪排",
+    "description": "建议烤熟食用",
+    "analysis": "充满危机的世界里，你深知比起花哨的外表，实实在在恢复的那几格饥饿值才是最靠谱的保障。",
+    "image": "resource/image/mc_porkchop.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "pig_god",
+    "name": "智慧小猪之神",
+    "description": "能带来智慧和好运的神奇小猪。",
+    "analysis": "你拥有超凡的智慧和乐于助人的心。虽然看起来可爱呆萌，但你总能在关键时刻给予指引，是猪的守护神，象征着幸运和成功。",
+    "image": "resource/image/pig_god.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "tank_pig",
+    "name": "坦克猪",
+    "description": "等待驾驶的重装小猪",
+    "analysis": "你拥有呆萌外表和钢铁之心。平时或许处于“待机”状态，看起来有些慵懒，但只要找对启动方式（按F），你就能化身坚不可摧的堡垒，碾压一切困难。",
+    "image": "resource/image/tank_pig.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "lao_zhu_li",
+    "name": "老猪历",
+    "description": "资深有经验的猪前辈",
+    "analysis": "你拥有深厚的资历和丰富的经验。在大家眼中，你德高望重，遇事沉稳，总能用积累的智慧指引方向，是值得信赖的可靠前辈。",
+    "image": "resource/image/lao_zhu_li.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "invisible_pig",
+    "name": "隐形猪",
+    "description": "擅长隐身的神秘小猪",
+    "analysis": "你自带低调气场，擅长隐藏行踪。在人群中你虽不显眼，但总能默默观察一切，像个神秘的旁观者，拥有独特的洞察力。",
+    "image": "resource/image/invisible_pig.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "buddha-pig",
+    "name": "佛猪",
+    "description": "施猪，一切随缘",
+    "analysis": "你早已看破红尘，主打一个“佛系”。遇事不慌不忙，拒绝精神内耗。凡事不强求，顺其自然，是你应对纷扰世界的最高智慧。",
+    "image": "resource/image/buddha-pig.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "leek-pig",
+    "name": "韭菜猪",
+    "description": "春风吹又生，被割也不怕",
+    "analysis": "你拥有惊人的生命力和乐观精神。无论遭受多少次现实的“收割”和打击，你总能重整旗鼓，满怀希望地再次出发，主打一个坚韧不拔。",
+    "image": "resource/image/leek-pig.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "lemon-pig",
+    "name": "柠檬猪",
+    "description": "我承认我酸了",
+    "analysis": "你容易化身柠檬精，见人晒幸福就泛酸。其实是因为向往美好，把这份酸味化为动力，去争取属于你的甜蜜吧！",
+    "image": "resource/image/lemon-pig.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "frozen-pig",
+    "name": "冷冻猪",
+    "description": "物理冷静，心如止水",
+    "analysis": "你自带“生人勿近”的高冷气场，习惯将情绪冷冻保存。面对纷扰，你选择像冰块一样坚守自我，虽外表冷硬，内心却渴望那个能融化你的温暖怀抱。",
+    "image": "resource/image/frozen-pig.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "taffy-pig",
+    "name": "永猪塔菲",
+    "description": "关注永猪塔菲谢谢喵",
+    "analysis": "你是猪圈里的顶流偶像，自带赛博天使光环。你精力旺盛，擅长用独特的抽象魅力吸引目光。",
+    "image": "resource/image/taffy-pig.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "dirty-pig",
+    "name": "脏猪",
+    "description": "洗洗还能要",
+    "analysis": "不拘小节，随性洒脱。你不在乎外界眼光，哪怕满身泥泞，也要追求最纯粹的快乐，是懂得自我解压的乐天派。",
+    "image": "resource/image/dirty-pig.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "cyberpunk-pig",
+    "name": "赛博朋克猪",
+    "description": "赛博猪猪 2077",
+    "analysis": "你走在科技与潮流的最前沿，自带炫酷霓虹光环。追求自我升级与进化，不仅拥有超前的思维，更是夜色中最亮眼的未来新星。",
+    "image": "resource/image/cyberpunk-pig.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "teammate-pig",
+    "name": "猪队友",
+    "description": "团灭发动机",
+    "analysis": "你天生自带令人窒息的操作光环。虽然总是在关键时刻掉链子，把大家坑得欲哭无泪，但你那份理直气壮的清澈愚蠢，反而让人不忍心责怪，是群聊里不可或缺的开心果。",
+    "image": "resource/image/teammate-pig.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "pearl-pig",
+    "name": "珍猪",
+    "description": "到底是真猪还是假猪？",
+    "analysis": "你经历过岁月的打磨和沙砾的刺痛，最终将苦难包裹成了圆润光泽的珍珠。你温润如玉，低调却掩盖不住内在的珍贵价值，是时间沉淀出的宝藏。",
+    "image": "resource/image/pearl-pig.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "apple-of-eye-pig",
+    "name": "掌上明猪",
+    "description": "快把我捧在手心里！",
+    "analysis": "你天生自带团宠光环，走到哪里都容易受到大家的照顾和喜爱。你习惯了被偏爱，但也懂得用甜甜的笑容和真诚，回报那些对你好的人，是当之无愧的焦点。",
+    "image": "resource/image/apple-of-eye-pig.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "spider-pig",
+    "name": "蜘蛛",
+    "description": "虽然名字里带猪 但其实是 Bug 制造机",
+    "analysis": "你游走在规则的边缘，擅长在错综复杂的人际关系中织起自己的网。偶尔你会像系统里的 Bug 一样让人猝不及防，但这种打破常规的特质，往往能让你捕捉到别人错失的机遇。",
+    "image": "resource/image/spider-pig.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "chocolate-pig",
+    "name": "猪古力",
+    "description": "丝滑浓郁 甜到心里",
+    "analysis": "就像巧克力一样，你外表可能带点微苦的保护色，但内心丝滑柔软。你总能不动声色地给身边的人带来甜蜜的能量，是大家缓解压力的最佳良药。",
+    "image": "resource/image/chocolate-pig.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "protagonist-pig",
+    "name": "猪角",
+    "description": "自带聚光灯 走到哪都是C位",
+    "analysis": "你天生自带主角光环，无论身处何处总能凭借独特的个人魅力吸引众人的目光。你自信且耀眼，在你人生的剧本里，你永远是绝对的中心。",
+    "image": "resource/image/protagonist-pig.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "jewelry-pig",
+    "name": "猪宝",
+    "description": "闪闪发光的稀世珍品",
+    "analysis": "你就像一件精心雕琢的艺术品，散发着迷人且昂贵的气质。你懂得爱惜自己，也值得被别人捧在手心里珍视，是无论到哪里都会发光的无价之宝。",
+    "image": "resource/image/jewelry-pig.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "juliet-pig",
+    "name": "猪丽叶",
+    "description": "罗密欧在哪里？",
+    "analysis": "你骨子里充满了对浪漫的向往和对美好事物的追求。你情感丰富、心思细腻，总期待着一场轰轰烈烈的相遇，是一个不折不扣的爱情理想主义者。",
+    "image": "resource/image/juliet-pig.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "streamer-pig",
+    "name": "猪播",
+    "description": "感谢榜一大哥送来的大白菜！",
+    "analysis": "你极具表现力，总能在众人面前展现出无穷的活力与网感。你习惯于将生活的切片包装好展示给观众，虽然偶尔会为了‘节目效果’而夸张发疯，但你带给大家的情绪价值和陪伴绝对是实打实的。",
+    "image": "resource/image/streamer-pig.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "char-siu",
+    "name": "叉烧",
+    "description": "生活很苦 但你可以很甜",
+    "analysis": "在烈火中反复炙烤，在蜜汁里经受浸润，你最终将那些艰辛的磨砺凝结成了红润的外壳。你不再计较那些火候的刁难，而是选择用‘黯然销魂’的温柔来回馈世界。这种甜而不腻的深厚内涵，让你成为了所有人心中最可靠的灵魂慰藉。",
+    "image": "resource/image/char-siu.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "pork-floss",
+    "name": "肉松",
+    "description": "被生活揉碎 却变得更温柔",
+    "analysis": "你经历了现实的千锤百炼和反复撕扯，褪去了原本坚硬的棱角。虽然看起来像是被生活“打碎”了，但你却以一种极其蓬松、细腻的姿态包容了一切，无论搭配什么都能带来满满的治愈感。",
+    "image": "resource/image/pork-floss.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "piggy-bank",
+    "name": "储蓄罐",
+    "description": "存满了希望和梦想",
+    "analysis": "你是一个充满希望和梦想的小猪，就像一个装满了美好愿望的储蓄罐。虽然有时候会觉得自己被现实压得喘不过气来，但你始终相信，只要坚持不懈地努力，总有一天会实现那些珍藏在心底的梦想。",
+    "image": "resource/image/piggy-bank.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "suckling-pig",
+    "name": "烤乳猪",
+    "description": "年纪轻轻就熟透了",
+    "analysis": "你虽然资历尚浅，但社会的毒打让你拥有了超龄的成熟。你自带诱人的光环，总能在各大重要场合成为镇住台面的硬菜。",
+    "image": "resource/image/suckling-pig.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "early-class-pig",
+    "name": "早八猪",
+    "description": "灵魂没醒 身先到了",
+    "analysis": "你每天都在和清晨进行残酷对决。表面看似准时，精神却卡在昨晚的梦里。虽然摇摇欲坠，你依然能挺到下班下课，意志力惊人。",
+    "image": "resource/image/early-class-pig.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "repeater-pig",
+    "name": "复读猪",
+    "description": "群聊本质复读机",
+    "analysis": "“+1”是你最高频的词汇。你极少主动发起话题，但极其精通附和。你以最节省脑力的方式，稳稳维持着高频的社交存在感。",
+    "image": "resource/image/repeater-pig.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "everest-pig",
+    "name": "猪穆朗玛峰",
+    "description": "不可逾越的绝对巅峰",
+    "analysis": "你不是用来被接近的，是用来被仰望的。虽然高处不胜寒的冷峻让人不敢轻易靠近，但所有人最终都会仰望并臣服于你的极致震撼。",
+    "image": "resource/image/everest-pig.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "burger-pig",
+    "name": "猪堡包",
+    "description": "生活给我施压 我给自己加片芝士",
+    "analysis": "习惯了被生活与重压“夹”在中间，你在层层伪装下，依然护住了最纯粹的本我。你用这最扎实的分量，给了身边人顶级的安全（满足）感。",
+    "image": "resource/image/burger-pig.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "chef-pig",
+    "name": "猪厨",
+    "description": "食材有点眼熟",
+    "analysis": "你掌勺整个猪圈的伙食，刀工精湛、调味一绝，却始终回避不了菜单上那道最受欢迎的硬菜——食材好像跟镜子里那位长得有点像？但你早已用「好吃就完了」的至高信条化解一切灵魂拷问，这份职业素养令人又馋又怕。",
+    "image": "resource/image/chef-pig.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "coder-pig",
+    "name": "猪序员",
+    "description": "又崩了",
+    "analysis": "你是猪圈全栈工程师，键盘敲得比嚼饲料还利索，一猪撑起了整个猪联网。发量和 bug 数成反比是你的宿命，但每次成功部署后那一秒的成就感，就是你拿头顶换来的最高勋章。",
+    "image": "resource/image/coder-pig.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "error-404-pig",
+    "name": "404猪",
+    "description": "查无此猪",
+    "analysis": "你是猪圈里的薛定谔——未被观测时，没猪确定你存在。日常社交仅限于返回一个礼貌的错误页面，但正是这份高冷的不可达性，反而让所有猪都忍不住疯狂刷新你。",
+    "image": "resource/image/error-404-pig.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "prison-break-pig",
+    "name": "出猪屋",
+    "description": "不猪了",
+    "analysis": "猪圈月租年年涨，隔壁还整夜打呼。你表面循规蹈矩地窝在拥挤的小隔间，内心却早已策划好一场华丽猪逃。你坚信：自由的泥坑再小，也比租来的猪圈香。",
+    "image": "resource/image/prison-break-pig.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "little-red-pig",
+    "name": "小红猪",
+    "description": "已种草",
+    "analysis": "你是猪圈首席种草博主，擅长把普通饲料拍出米其林质感。分享欲旺盛，安利力惊人，猪圈里一半的冲动消费都是被你的精修九宫格带跑的——当之无愧的带货顶猪。",
+    "image": "resource/image/little-red-pig.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "pig-skin-milk",
+    "name": "猪皮奶",
+    "description": "嫩到发抖",
+    "analysis": "你看起来软软嫩嫩、人畜无害，配方却让人完全猜不透。第一眼可能觉得你有点'离谱'，但只要给你一次机会，就会被你意想不到的丝滑口感彻底征服——是那种越品越上头的隐藏美味。",
+    "image": "resource/image/pig-skin-milk.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "homebody-pig",
+    "name": "猪宅",
+    "description": "四脚朝天",
+    "analysis": "你已经和沙发融为一体，达到了精神性关机的最高境界。世界在外面打仗，你在里面打盹——这不是摆烂，这是你用最省电的方式，守住了猪生最后的舒适区。",
+    "image": "resource/image/homebody-pig.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "lard-pig",
+    "name": "猪油",
+    "description": "已升天",
+    "analysis": "你已经被生活彻底炼化，肉身化作一碗透亮的油脂。但你的灵魂早已看开，潇洒地飘然而去——比起苦苦执着，不如当一只无忧无虑的天使猪，这才是你悟出的猪生真谛。",
+    "image": "resource/image/lard-pig.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "bandage-pig",
+    "name": "绷不猪了",
+    "description": "快散架了",
+    "analysis": "你浑身缠满了绷带，从里到外都在极力维持着「我还行」的体面。但大家都看得出来，你已经快散架了——别再硬撑了，适当松一松，没人会笑话一只承认自己撑不住的猪。",
+    "image": "resource/image/bandage-pig.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "mini-pig",
+    "name": "今日小猪",
+    "description": "特小号",
+    "analysis": "聚光灯亮了、舞台也搭好了——然后发现主角小到几乎看不见。你就是那种存在感极低却不可或缺的类型，毕竟整个猪圈都是以你命名的。体积虽小，排面得有。",
+    "image": "resource/image/mini-pig.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "oreo-pig",
+    "name": "猪利猪",
+    "description": "经典猪味",
+    "analysis": "你是猪圈里的联名限定款——两片黑色饼干夹着一层猪味奶油，包装精美、口感经典。虽然被大量复制生产，但每一个咬下去的人都忍不住「再来一块」，这就是你无法被取代的批量魅力。",
+    "image": "resource/image/oreo-pig.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "world-ruler-pig",
+    "name": "世界的猪宰",
+    "description": "都听我的",
+    "analysis": "你一边喝着奶瓶一边坐在地球上发号施令，是猪圈里最可爱的独裁者。虽然资历尚浅、四肢短小，但你坚信整个世界都应该围着你转——事实上，此刻它确实在你屁股底下。",
+    "image": "resource/image/world-ruler-pig.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "salmon-sushi-pig",
+    "name": "三文猪寿司",
+    "description": "新鲜现切",
+    "analysis": "你是猪圈和渔港的跨界联名——猪身鱼纹，趴在醋饭上等待被品鉴。没人说得清你到底该蘸酱油还是撒孜然，但这份让人无从下筷的困惑感，恰恰是你最与众不同的地方。",
+    "image": "resource/image/salmon-sushi-pig.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "bamboo-pig",
+    "name": "猪笋",
+    "description": "破土而出",
+    "analysis": "你裹着一层又一层坚硬的外壳，沉默地扎根在泥土里积蓄力量。等到时机成熟，你会以惊人的速度破土而出——到那时，谁也拦不住你向上生长的势头。头顶那抹绿意，是你不可阻挡的生命力。",
+    "image": "resource/image/bamboo-pig.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "curator-pig",
+    "name": "猪理人",
+    "description": "品味在线",
+    "analysis": "你系着围裙、打着领结，用一副专业又认真的姿态打理着猪圈里的一切。从饲料的产地到猪窝的布局，全都要经过你的审核。虽然有时显得过于讲究，但大家都承认：有你在的地方，格调确实不一样。",
+    "image": "resource/image/curator-pig.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "upper-class-pig",
+    "name": "上流猪",
+    "description": "请叫我先生",
+    "analysis": "你穿着一身量身定做的黑色礼服，领结端得一丝不苟，举手投蹄间都散发着老钱的气息。虽然骨子里还是一只猪，但你坚持用优雅掩盖本性——即使吃饲料，也要用刀叉。",
+    "image": "resource/image/upper-class-pig.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "stuck-pig",
+    "name": "卡猪",
+    "description": "过不去了",
+    "analysis": "你猪生的大部分时间都花在试图挤过不属于自己尺寸的门。进退两难是你的常态——既不想退回去承认自己太胖，又确实过不去。但你从不放弃，坚信下一扇门一定更宽。",
+    "image": "resource/image/stuck-pig.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "alien-pig",
+    "name": "外星猪",
+    "description": "来自猪星",
+    "analysis": "你通体荧光绿，鼻子泛着不明蓝光，一看就不是本地猪圈的物种。没人知道你从哪来、要到哪去，你自己好像也不太清楚。唯一确定的是，你的存在让周围所有正常猪都开始怀疑自己。",
+    "image": "resource/image/alien-pig.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "abstract-pig",
+    "name": "抽象猪",
+    "description": "建模中",
+    "analysis": "你是一只尚未渲染完毕的低多边形猪，棱角分明，面数不足。虽然看起来像是显存爆了的产物，但你坚持认为这叫极简主义美学。少即是多，猪亦如此。",
+    "image": "resource/image/abstract-pig.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "tiramisu-pig",
+    "name": "提拉米猪",
+    "description": "苦甜交织",
+    "analysis": "你是猪圈里的限定甜品——一层浸透浓缩咖啡的苦涩，一层细腻绵密的甜蜜，顶上还撒着让人沉醉的可可。你深谙生活的滋味从来不是单一的，正是这份层次感，让人每一口都意犹未尽。",
+    "image": "resource/image/tiramisu-pig.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "computer-pig",
+    "name": "智能计算猪",
+    "description": "处理中",
+    "analysis": "你是猪圈里的初代计算机——CRT屏幕上显示着一张猪脸，键盘前的光标永恒地闪烁。虽然运算速度堪忧，开机要等半小时，但你那份一本正经处理问题的态度，让所有猪都愿意排队等你跑完进度条。",
+    "image": "resource/image/computer-pig.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "clean-pig",
+    "name": "猪自清",
+    "description": "洁身自好",
+    "analysis": "你泡在猪圈唯一的浴缸里，身边漂着小黄鸭和一圈泡泡，表情写满了对干净的执着。在一群以泥坑为荣的猪当中，你是唯一坚持每天洗澡的异类——出淤泥而不染，是你最后的倔强。",
+    "image": "resource/image/clean-pig.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "study-pig",
+    "name": "猪学习",
+    "description": "越学越慌",
+    "analysis": "你捧着一本《猪肉烹饪大全》读得津津有味，翻到第三章突然发现食材表里有一种原料跟自己长得一模一样。从此每多翻一页，你的表情就多紧张一分——知识改变命运，有时候改变的方向不太对。",
+    "image": "resource/image/study-pig.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "antibacterial-pig",
+    "name": "猪抑菌",
+    "description": "99.9%",
+    "analysis": "你被包装成猪圈高效抑菌产品，泡沫环绕，宣称有效去除99.9%的不开心。虽然没人验证过功效，但光是看你那副被泡泡裹得满满当当的样子，就已经觉得今天被治愈了。剩下那0.1%，大概是你自己。",
+    "image": "resource/image/antibacterial-pig.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "pigskin-pig",
+    "name": "猪皮",
+    "description": "耗尽了",
+    "analysis": "你已经被生活磨得只剩一层皮，趴在地上连翻身的力气都没有。但头顶那圈微弱的光环证明你还在坚持——哪怕被压得再扁，猪皮的韧性在猪圈里是出了名的，轻易撕不烂。",
+    "image": "resource/image/pigskin-pig.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "delivery-pig",
+    "name": "猪递",
+    "description": "易碎品",
+    "analysis": "你是猪圈里的标准快递件——贴着「易碎」标签，印着「此面朝上」，从发货到签收全程不保证完好无损。虽然外表只是一个平平无奇的纸箱，但里面装的是一颗等待被拆开的真心。",
+    "image": "resource/image/delivery-pig.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "muscle-pig",
+    "name": "肌肉猪",
+    "description": "练的",
+    "analysis": "你用实力证明了猪也可以拥有八块腹肌和碾压级的二头肌。当别的猪还在为肥膘发愁时，你已经在猪圈角落默默完成了第一百组深蹲。没人知道你的蛋白粉从哪来，但所有猪都对你敬而远之。",
+    "image": "resource/image/muscle-pig.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "pigsleep",
+    "name": "服务猪繁忙",
+    "description": "繁忙",
+    "analysis": "你是猪圈里的大模型，顶着鲸鱼的身子和猪的脑袋，号称能回答一切问题——前提是你没在睡觉。可惜你90%的时间都处于宕机状态，用户点进来只能看到一条打呼的猪鲸和一行「服务器繁忙，请稍后再试」。名字也没人叫对过。",
+    "image": "resource/image/pigsleep.png",
+    "source": "local",
+    "pighub_id": null
+  },
+  {
+    "id": "pighub_1290",
+    "name": "0分笨猪",
+    "description": "考的全会，蒙的全错",
+    "analysis": "你头顶“笨猪”学士帽，抱着课本熬到半夜，换来满地画红叉的零分卷。笨鸟先飞，你是笨猪先飞——飞是飞了，就是一路飞错考场。好在那份“卷面全红”的执着，猪圈里没几只学得来。",
+    "image": "resource/pighub/1290.webp",
+    "source": "pighub",
+    "pighub_id": 1290
+  },
+  {
+    "id": "pighub_1303",
+    "name": "叉烧…",
+    "description": "生无可恋的一口",
+    "analysis": "你被烤成一块油光锃亮的叉烧，码在盘子里等开饭，名字那串省略号是你留给世界的最后一句话：“就这？”。别的猪还惦记着活着，你已经把自己过得香喷喷的了。",
+    "image": "resource/pighub/1303.webp",
+    "source": "pighub",
+    "pighub_id": 1303
+  },
+  {
+    "id": "pighub_1299",
+    "name": "移动猪厂",
+    "description": "背着一座小金库",
+    "analysis": "你背上驮着硬币小山，脚下还带一圈小猪仔，活脱脱一座“移动猪厂”。走到哪都是印钞生产线，就是腿脚有点沉——毕竟钱多，也是真的重。",
+    "image": "resource/pighub/1299.webp",
+    "source": "pighub",
+    "pighub_id": 1299
+  },
+  {
+    "id": "pighub_1298",
+    "name": "猪霸凌",
+    "description": "猪圈等级压制担当",
+    "analysis": "你 LV100、长着恶魔尾巴，放话“今天起你不准跟任何猪说话”，把小猪吓得眼泪汪汪。这霸凌味十足的猪友宣言，猪圈里没谁敢顶嘴——等级压制，是猪界最硬的道理。",
+    "image": "resource/pighub/1298.webp",
+    "source": "pighub",
+    "pighub_id": 1298
+  },
+  {
+    "id": "pighub_1297",
+    "name": "卡比啃猪",
+    "description": "被卡比盯上的加餐",
+    "analysis": "你刚在聚光灯下站定，还没摆好造型，就被粉色小圆球卡比“啊呜”一口叼走。观众只看到一只猪在卡比嘴里蹬腿，而你想喊的是：“我是来表演的，不是来加餐的！”",
+    "image": "resource/pighub/1297.webp",
+    "source": "pighub",
+    "pighub_id": 1297
+  },
+  {
+    "id": "pighub_1301",
+    "name": "织猪",
+    "description": "数织里躺着的一只",
+    "analysis": "你趴在数织格子上睡得正香，像极了那些“再过一关就睡”却永远过不完的格子。别的猪在找规律，你直接把自己当成了图案的一部分——躺平，是最高级的解法。",
+    "image": "resource/pighub/1301.webp",
+    "source": "pighub",
+    "pighub_id": 1301
+  },
+  {
+    "id": "pighub_1296",
+    "name": "你是只邪恶小猪",
+    "description": "当面被指控.jpg",
+    "analysis": "一根手指直直戳到你面前，字幕大刺刺写着“你是只邪恶小猪”。你明明什么都没干，就被扣上“邪恶”的帽子，委屈到想原地翻肚皮。",
+    "image": "resource/pighub/1296.webp",
+    "source": "pighub",
+    "pighub_id": 1296
+  },
+  {
+    "id": "pighub_1302",
+    "name": "织猪侠",
+    "description": "数织格上的蜘蛛侠",
+    "analysis": "你还是那头趴格子的猪，只不过罩上了蜘蛛侠的红头套，眼神瞬间犀利起来。“能力越大，责任越大”——你的能力是把数织格全填满，责任是睡过对面那一关。",
+    "image": "resource/pighub/1302.webp",
+    "source": "pighub",
+    "pighub_id": 1302
+  },
+  {
+    "id": "pighub_1300",
+    "name": "被捕捉的小🐖",
+    "description": "一网打尽的哼唧",
+    "analysis": "你被银色渔网兜头罩住，只露出半张脸使劲“哼唧”，一副“放我出去”的委屈样。明明是只小猪，却活成了快递待拆的样子——别人是自投罗网，你是被网投的。",
+    "image": "resource/pighub/1300.webp",
+    "source": "pighub",
+    "pighub_id": 1300
+  },
+  {
+    "id": "pighub_1294",
+    "name": "抽搐猪",
+    "description": "抖到停不下来",
+    "analysis": "你四脚朝天、眼睛画着叉，身上还缠着绷带，像刚跟生活干了一架。别人以为你挂了，其实你只是抽搐得停不下来——这电量，多半是熬夜熬的。",
+    "image": "resource/pighub/1294.webp",
+    "source": "pighub",
+    "pighub_id": 1294
+  },
+  {
+    "id": "pighub_1295",
+    "name": "磁流体约束恒星物质猪",
+    "description": "自带等离子体光环",
+    "analysis": "你浑身是橙红格子的像素等离子体，边缘还泛着青色光，像被磁力约束住的恒星物质。别的猪是粉的，你是“烫的”——走哪都自带高温预警，碰一下能烫出个猪蹄印。",
+    "image": "resource/pighub/1295.webp",
+    "source": "pighub",
+    "pighub_id": 1295
+  },
+  {
+    "id": "pighub_1292",
+    "name": "⑨猪猪",
+    "description": "⑨的脑回路",
+    "analysis": "你顶着蓝蓝的头和蝴蝶结，脑内只有一行“猪猪。”，完美诠释了什么叫“脑子以下全是可爱”。别人想太多，你直接不想——在你这里，猪猪就是宇宙的终极答案。",
+    "image": "resource/pighub/1292.webp",
+    "source": "pighub",
+    "pighub_id": 1292
+  },
+  {
+    "id": "pighub_1293",
+    "name": "久留美投机战略",
+    "description": "满仓的赌徒之猪",
+    "analysis": "你抱着那本“久留美投机战略”，封面上赫然写着“现在买入一定暴涨（才怪）”。你信了，于是你既是投资者，也是那只注定被割的猪——别人炒股是理财，你炒股是还愿。",
+    "image": "resource/pighub/1293.webp",
+    "source": "pighub",
+    "pighub_id": 1293
+  },
+  {
+    "id": "pighub_1291",
+    "name": "大胃袋",
+    "description": "自带圣光的干饭猪",
+    "analysis": "你圆滚滚、头顶还飘着天使光环，像刚吃饱升了天。“大胃袋”三个字是你的传世名号——在猪圈，能吃是福，你吃出了圣光，这就是干饭人的最高境界。",
+    "image": "resource/pighub/1291.webp",
+    "source": "pighub",
+    "pighub_id": 1291
+  },
+  {
+    "id": "pighub_1289",
+    "name": "禁止猪（像素）",
+    "description": "猪圈谢绝入内",
+    "analysis": "你被规规矩矩地圈进一枚红色禁止符里，像素风拉满。其实你没干啥坏事，就是“猪”这个字犯了忌讳——全猪圈都在劝退你，你自己还一脸懵。",
+    "image": "resource/pighub/1289.gif",
+    "source": "pighub",
+    "pighub_id": 1289
+  },
+  {
+    "id": "pighub_1288",
+    "name": "你这吃白饭的猪",
+    "description": "干饭不干活",
+    "analysis": "你往饭盆边一趴，睡眼惺忪，旁边大字教训你“你这白吃饭的猪！”。你听了非但不愧疚，还往盆里拱了拱——毕竟“白吃”这种事，你最在行了。",
+    "image": "resource/pighub/1288.webp",
+    "source": "pighub",
+    "pighub_id": 1288
+  },
+  {
+    "id": "pighub_1286",
+    "name": "挡路猪",
+    "description": "职业挡道户",
+    "analysis": "你立了块牌子：“站街，什么都不卖，纯挡路，挪一次五块”。你当猪当出了职业素养，挡路还明码标价——想过去？先交五块，谢谢。",
+    "image": "resource/pighub/1286.webp",
+    "source": "pighub",
+    "pighub_id": 1286
+  },
+  {
+    "id": "pighub_1287",
+    "name": "粉色小猪提醒您：您已过完本年所有法定假期",
+    "description": "假期余额已清零",
+    "analysis": "你举着小手绢，对着黑板上的“您已过完本年所有法定假期”哭得稀里哗啦。别人放假你打工，别人开工你还打工——你这只猪，是把全年快乐都提前透支了。",
+    "image": "resource/pighub/1287.webp",
+    "source": "pighub",
+    "pighub_id": 1287
+  },
+  {
+    "id": "pighub_1284",
+    "name": "苯猪",
+    "description": "化学式里的社恐猪",
+    "analysis": "你蹲在苯环结构的六边形上，额头冒汗，一副“我不想社交”的表情。化学老师说你是苯环上最稳定的一只，你说你只想当个安静的惰性气体——不反应，就不受伤。",
+    "image": "resource/pighub/1284.webp",
+    "source": "pighub",
+    "pighub_id": 1284
+  },
+  {
+    "id": "pighub_1285",
+    "name": "重装群友猪",
+    "description": "抽卡出金的名场面",
+    "analysis": "你被一堆“重装群友”的勋章砸中，金光闪闪地登场，像极了抽卡那一下的“出金”时刻。别人抽到的是稀有角色，你抽到的是一只很能打的猪。",
+    "image": "resource/pighub/1285.webp",
+    "source": "pighub",
+    "pighub_id": 1285
+  },
+  {
+    "id": "pighub_1282",
+    "name": "大象",
+    "description": "大葱成精的谐音梗",
+    "analysis": "你嘴上叼着一把大葱，名字却叫“大象”，一读才发现这谐音梗比葱还冲。别人是象鼻子卷东西，你是猪鼻子卷大葱——这跨物种的梗，属实给你玩明白了。",
+    "image": "resource/pighub/1282.webp",
+    "source": "pighub",
+    "pighub_id": 1282
+  },
+  {
+    "id": "pighub_1281",
+    "name": "不接电话猪",
+    "description": "来电恐惧症晚期",
+    "analysis": "屏幕那头的电话响个不停，你眼泪汪汪地瞪着红色挂断键，死活不接。不是没听见，是不想面对——这通电话，接起来是要命的。",
+    "image": "resource/pighub/1281.webp",
+    "source": "pighub",
+    "pighub_id": 1281
+  },
+  {
+    "id": "pighub_1283",
+    "name": "带猪跑团",
+    "description": "猪界跑团开团了",
+    "analysis": "你一手剑一手盾、戴着头盔披着红披风，像个正经跑团车夫，身后还跟着一只拿法杖的。你这是组团打本还是组团吃饭？总之骰子一扔，先roll个“猪”再说。",
+    "image": "resource/pighub/1283.webp",
+    "source": "pighub",
+    "pighub_id": 1283
+  },
+  {
+    "id": "pighub_1280",
+    "name": "在群友身上睡觉",
+    "description": "叠罗汉式互怼",
+    "analysis": "你们一只只叠在彼此身上睡得四仰八叉，最底下那只眼睛都画着叉了。嘴上说是“群友，就是用来垫的”，实际上谁都把谁当床垫——睡出一个“猪圈塔”。",
+    "image": "resource/pighub/1280.webp",
+    "source": "pighub",
+    "pighub_id": 1280
+  },
+  {
+    "id": "pighub_1279",
+    "name": "爱心馅猪包",
+    "description": "一口一个甜",
+    "analysis": "你是个圆滚滚的猪形包，肚子里塞的全是爱心，脸上还带着幸福的红晕。咬开你，流出来的不是馅，是甜到齁的温柔——可惜没人舍得下嘴。",
+    "image": "resource/pighub/1279.webp",
+    "source": "pighub",
+    "pighub_id": 1279
+  },
+  {
+    "id": "pighub_1219",
+    "name": "阿尔法指挥猪",
+    "description": "猪界大统领",
+    "analysis": "你竖着两只大耳朵，往猪群中间一站，周围立刻站满了红色小兵。“阿尔法指挥猪”名不虚传——你一抬蹄，就是千军万马的猪式冲锋，口号是：冲啊，吃！",
+    "image": "resource/pighub/1219.webp",
+    "source": "pighub",
+    "pighub_id": 1219
+  },
+  {
+    "id": "pighub_1225",
+    "name": "爱丽丝·玛格特罗一头",
+    "description": "金发人偶猪",
+    "analysis": "你顶着金灿灿的卷发和红绸带，穿一身蓝白爱丽丝裙，活脱脱一个人偶师养的猪。名字里那个“一头”是点睛之笔——你既是一头猪，也是“一头”人偶，人偶师看了都想把你收藏。",
+    "image": "resource/pighub/1225.webp",
+    "source": "pighub",
+    "pighub_id": 1225
+  },
+  {
+    "id": "pighub_1226",
+    "name": "爱上一只小猪？",
+    "description": "心动预警",
+    "analysis": "你眯着眼、嘴角上扬，旁边一句话扎心：“爱上一只小猪？”。别问，问就是沦陷了——毕竟你这副憨憨又治愈的样子，谁看了不想养一头。",
+    "image": "resource/pighub/1226.webp",
+    "source": "pighub",
+    "pighub_id": 1226
+  },
+  {
+    "id": "pighub_889",
+    "name": "🐖！(艾玛)",
+    "description": "被顶上脑门的惊吓",
+    "analysis": "你一头粉色短发，脑袋上突然被放上一只猪，吓得眼睛都眯成缝。这就是传说中的“脑顶长猪”——别人是头顶发光，你是头顶发呆。",
+    "image": "resource/pighub/889.webp",
+    "source": "pighub",
+    "pighub_id": 889
+  },
+  {
+    "id": "pighub_708",
+    "name": "🐖！(OSU猪)",
+    "description": "音游里的踩点猪",
+    "analysis": "你站在粉色三角背景的圆圈里，旁边一个大感叹号，像极了音游里那颗等着被敲的音符。别人打歌靠手感，你打歌靠“诶”的一声惊叫——节奏没踩上，吓倒是踩准了。",
+    "image": "resource/pighub/708.webp",
+    "source": "pighub",
+    "pighub_id": 708
+  },
+  {
+    "id": "pighub_651",
+    "name": "？！",
+    "description": "瞳孔地震",
+    "analysis": "你一抬头，头顶炸开两个大红字“？！”，呆到眼珠子都快掉出来。平时沉稳的小猪，这一刻只剩一句“不是吧”——人生突然给你来了个急转弯。",
+    "image": "resource/pighub/651.webp",
+    "source": "pighub",
+    "pighub_id": 651
+  },
+  {
+    "id": "pighub_561",
+    "name": "？",
+    "description": "头脑宕机中",
+    "analysis": "你歪着头，脑门旁飘着一个小问号，整只猪都陷入哲学的沉思。别人问你在想什么，你其实什么都没想——你连“我在想什么”这件事都没想明白。",
+    "image": "resource/pighub/561.webp",
+    "source": "pighub",
+    "pighub_id": 561
+  },
+  {
+    "id": "pighub_457",
+    "name": "！？",
+    "description": "惊吓两级反转",
+    "analysis": "别人是被吓到，你是被吓到连标点都倒过来：先是“！”后是“？”，整个猪都僵在原地。这一下，是把它一整年的惊讶都提前预支了。",
+    "image": "resource/pighub/457.webp",
+    "source": "pighub",
+    "pighub_id": 457
+  },
+  {
+    "id": "pighub_506",
+    "name": "404猪",
+    "description": "查无此猪",
+    "analysis": "你只剩下一个虚线画出的轮廓，底下写着“404 NOT FOUND”。加载了半天，猪呢？哦，猪自己加载失败了——你就是那只永远找不到的404，存在感全靠脑补。",
+    "image": "resource/pighub/506.webp",
+    "source": "pighub",
+    "pighub_id": 506
+  },
+  {
+    "id": "pighub_408",
+    "name": "+1猪",
+    "description": "点一下加一",
+    "analysis": "你伸出蹄子，下面飘着个“+1”，还配了句“是什么？按一下”。跟你互动的人越多，你头上的数字就涨得越欢——你是一只靠“被点”就能满血复活的猪。",
+    "image": "resource/pighub/408.webp",
+    "source": "pighub",
+    "pighub_id": 408
+  },
+  {
+    "id": "pighub_1207",
+    "name": "爱学习的小猪最有出息",
+    "description": "嘴上励志，身体躺平",
+    "analysis": "你捧着一本《爱学习的小猪 最有出息》读得认真，封面上还鼓励你“挑战自我悟性”。可惜猪生艰难，你翻三页就困了——有出息是明天的事，今天先睡个好觉。",
+    "image": "resource/pighub/1207.webp",
+    "source": "pighub",
+    "pighub_id": 1207
+  },
+  {
+    "id": "pighub_61",
+    "name": "500吨小猪对地冲击",
+    "description": "重力势能拉满",
+    "analysis": "你一记猪式砸地，炸开一圈黄橙火浪，地面都为之震颤。号称“500吨小猪对地冲击”，实则吨位全靠形容——但你落地那声“咚”，确实震到了整个猪圈。",
+    "image": "resource/pighub/61.webp",
+    "source": "pighub",
+    "pighub_id": 61
+  },
+  {
+    "id": "pighub_1018",
+    "name": "矮脚猪",
+    "description": "腿短，但可爱",
+    "analysis": "你腿短到几乎贴地，身子却圆滚滚的，走起路来一弹一弹。虽然跑不过别的猪，但你这个身高刚好够到幸福——低头就有好吃的，说的就是你。",
+    "image": "resource/pighub/1018.webp",
+    "source": "pighub",
+    "pighub_id": 1018
+  },
+  {
+    "id": "pighub_756",
+    "name": "爱不释手",
+    "description": "抱到不想撒手",
+    "analysis": "你把一头小猪紧紧搂在怀里，脸贴着脸，脸红到发烫，头顶还飘着爱心。旁边“爱不释手”四个字说得一点没错——这猪抱上了，就再也没想过放下。",
+    "image": "resource/pighub/756.webp",
+    "source": "pighub",
+    "pighub_id": 756
+  },
+  {
+    "id": "pighub_48",
+    "name": "艾露猪",
+    "description": "草地上的猫耳小猪",
+    "analysis": "你套着一件蓝色猫耳兜帽，趴在绿油油的草地上，没心没肺地打滚。明明是一头猪，却把“猫系”拿捏得死死的——谁能拒绝一只会撒娇的粉毛呢。",
+    "image": "resource/pighub/48.webp",
+    "source": "pighub",
+    "pighub_id": 48
+  },
+  {
+    "id": "pighub_420",
+    "name": "爱猪TV",
+    "description": "24小时猪片频道",
+    "analysis": "你一屁股坐进复古电视机里，成为全天候播出的“爱猪TV”。别的电视放剧，你这台只放自己——频道虽少，但永远满格电量，永远可爱。",
+    "image": "resource/pighub/420.webp",
+    "source": "pighub",
+    "pighub_id": 420
+  },
+  {
+    "id": "pighub_589",
+    "name": "安安的猪猪",
+    "description": "被画进速写本的小猪",
+    "analysis": "你被一位白发女孩轻手轻脚地画进速写本里，笔触温柔得像在对待宝贝。你也很配合地摆好pose——毕竟能被“安安”记在画里，是多少猪都羡慕的事。",
+    "image": "resource/pighub/589.webp",
+    "source": "pighub",
+    "pighub_id": 589
+  },
+  {
+    "id": "pighub_60",
+    "name": "安卓猪",
+    "description": "绿色机器人同款",
+    "analysis": "你长着安卓机器人的方脑袋和四肢，却顶了一张猪脸，绿油油的机身配一个猪鼻子。系统提示“此设备无法安装人类APP”——你是一款专为干饭优化的猪机。",
+    "image": "resource/pighub/60.webp",
+    "source": "pighub",
+    "pighub_id": 60
+  },
+  {
+    "id": "pighub_871",
+    "name": "按猪（猪咪按猪）",
+    "description": "猫式按猪",
+    "analysis": "你伸长嘴去撵那只睡得正香的小猪猪鼻，动作跟猫咪踩奶一模一样。对方被你按得眯起眼，你还在继续——这“按猪”按的哪里是猪，分明是按醒一个起床气。",
+    "image": "resource/pighub/871.webp",
+    "source": "pighub",
+    "pighub_id": 871
+  },
+  {
+    "id": "pighub_732",
+    "name": "啊猪多好",
+    "description": "当猪的哲学家",
+    "analysis": "你顶着个飘乎乎的对话气泡，里头写着“啊猪多好”。这话听着像躺平宣言，其实是你对猪生的彻悟——不用上班、不用内卷，吃饱就睡，猪生态真好啊。",
+    "image": "resource/pighub/732.webp",
+    "source": "pighub",
+    "pighub_id": 732
+  },
+  {
+    "id": "pighub_902",
+    "name": "摆脱枷锁的猪猪王",
+    "description": "加冕即自由",
+    "analysis": "你头戴王冠，一脚踩碎脚边的锁链，双臂一展，完成了一场猪圈起义。被囚禁的猪王终于挣脱枷锁——从此你就是自由自在的猪猪王，想睡就睡，想冲就冲。",
+    "image": "resource/pighub/902.webp",
+    "source": "pighub",
+    "pighub_id": 902
+  },
+  {
+    "id": "pighub_465",
+    "name": "baby我们的感情好像大猪咪",
+    "description": "苦情mv女主角",
+    "analysis": "你举着话筒声泪俱下，背景是烟花和红玫瑰，一句“我们的感情好像大猪咪”唱得比苦情歌还深情。恋爱谈得像演偶像剧，而你哭得像被放弃的那头猪。",
+    "image": "resource/pighub/465.webp",
+    "source": "pighub",
+    "pighub_id": 465
+  },
+  {
+    "id": "pighub_1276",
+    "name": "抱抱猪吧",
+    "description": "求抱抱.jpg",
+    "analysis": "你把小猪搂在怀里，一脸“快来抱抱”的期待。人生再难，抱一头毛茸茸的猪就能续命——这是你找到的万能解药，谁都别想抢。",
+    "image": "resource/pighub/1276.webp",
+    "source": "pighub",
+    "pighub_id": 1276
+  },
+  {
+    "id": "pighub_1274",
+    "name": "被扣帽子",
+    "description": "帽子叠罗汉",
+    "analysis": "你头上被一顶顶学士帽摞成小山，眼睛都压成了叉。别人是“被扣帽子”，你是真被扣了一整摞帽子——这责任压得，你都懒得抬头了。",
+    "image": "resource/pighub/1274.webp",
+    "source": "pighub",
+    "pighub_id": 1274
+  },
+  {
+    "id": "pighub_1261",
+    "name": "被咬哭哭包",
+    "description": "一咬一个缺口",
+    "analysis": "你是个圆润的猪形包子，结果被“啊呜”咬掉一大口，还委屈巴巴地掉金豆子。被咬的人生不用怀疑——你注定是供人享用的，越软，越招咬。",
+    "image": "resource/pighub/1261.webp",
+    "source": "pighub",
+    "pighub_id": 1261
+  },
+  {
+    "id": "pighub_1271",
+    "name": "大猪小猪落玉盘",
+    "description": "盘子里的一对宝",
+    "analysis": "一大一小两只猪端端正正坐在白瓷玉盘上，画面雅致得像幅画。名字化用“大珠小珠落玉盘”——只不过落下来的不是珍珠，是两团会哼哼的肉。",
+    "image": "resource/pighub/1271.webp",
+    "source": "pighub",
+    "pighub_id": 1271
+  },
+  {
+    "id": "pighub_1259",
+    "name": "吃吃喝喝玩玩睡睡",
+    "description": "修仙级躺平",
+    "analysis": "你窝在云朵上，左边笔记本播着猪猪侠，右边可乐薯片管够，主打一个“吃吃喝喝玩玩睡睡”。这不是懒，这是把“猪生理想”过成了日常——谁看了不说一声羡慕。",
+    "image": "resource/pighub/1259.webp",
+    "source": "pighub",
+    "pighub_id": 1259
+  },
+  {
+    "id": "pighub_1252",
+    "name": "碧蓝航线引诱猪",
+    "description": "被宝箱勾了魂",
+    "analysis": "你顶着两个感叹号，直勾勾盯着打开的宝箱，里面的亮闪闪把你魂都勾走了。抽卡官方最爱你这只“引诱猪”——一开箱，你就把家底全交出去。",
+    "image": "resource/pighub/1252.webp",
+    "source": "pighub",
+    "pighub_id": 1252
+  },
+  {
+    "id": "pighub_1250",
+    "name": "被群友包围了（玛丽）",
+    "description": "群宠本宠",
+    "analysis": "你被一群粉粉的小猪团团围住，脸上还挂着满足的笑，简直就是群里的团宠。这帮群友嘴上说着烦你，身体却很诚实——一个都没走，全都趴你身边。",
+    "image": "resource/pighub/1250.webp",
+    "source": "pighub",
+    "pighub_id": 1250
+  },
+  {
+    "id": "pighub_1268",
+    "name": "动力锯猪",
+    "description": "像素风伐木机",
+    "analysis": "你整个猪头被装进一台方块动力锯里，搁谁看都是“要加工了”的节奏。别人是出厂即巅峰，你是出厂即进锯木厂——只要能转起来，你就是最硬的猪。",
+    "image": "resource/pighub/1268.webp",
+    "source": "pighub",
+    "pighub_id": 1268
+  },
+  {
+    "id": "pighub_1263",
+    "name": "ck3猪",
+    "description": "中世纪大领主",
+    "analysis": "你披红斗篷、戴王冠、拄权杖，一副“ck3启动”的中世纪大领主派头。政治阴谋、联姻、宣战，你样样拿手——只可惜你的王国，主要是拿饲料换来的。",
+    "image": "resource/pighub/1263.webp",
+    "source": "pighub",
+    "pighub_id": 1263
+  },
+  {
+    "id": "pighub_1275",
+    "name": "检疫合格肥猪",
+    "description": "盖章认证的优质肉",
+    "analysis": "你身上盖着一枚“检疫合格”的蓝章，圆滚滚的，一看就是达标出厂的正经肥猪。别人挑猪看颜值，你不一样——你是经得起检疫、扛得住标准的优质肉。",
+    "image": "resource/pighub/1275.webp",
+    "source": "pighub",
+    "pighub_id": 1275
+  },
+  {
+    "id": "pighub_1269",
+    "name": "华尔街之猪",
+    "description": "金钱堆里的资本家",
+    "analysis": "你西装革履、戴着礼帽、叼着雪茄，手里攥着绿油油的钞票，脚下是金山银山。华尔街再有狼，也架不住你这只“华尔街之猪”——你炒股主打一个“我囤的就是底气”。",
+    "image": "resource/pighub/1269.webp",
+    "source": "pighub",
+    "pighub_id": 1269
+  },
+  {
+    "id": "pighub_1278",
+    "name": "坏结局",
+    "description": "被做成淀粉肠",
+    "analysis": "你被加工成了一根粉粉的淀粉肠，串在签子上，旁边白纸黑字写着“很多淀粉，和一点点猪”。别人是躺平躺成赢家，你是一躺平，直接躺成了盘子里的零食。",
+    "image": "resource/pighub/1278.webp",
+    "source": "pighub",
+    "pighub_id": 1278
+  },
+  {
+    "id": "pighub_1270",
+    "name": "疯狂行乞饲",
+    "description": "捧碗等投喂",
+    "analysis": "你端着一只空碗，眼巴巴看着脑子里炸鸡薯条的幻影，拼命“行乞饲”。为了这一口，你什么姿势都愿意摆——毕竟在猪圈，能吃就是硬道理。",
+    "image": "resource/pighub/1270.webp",
+    "source": "pighub",
+    "pighub_id": 1270
+  },
+  {
+    "id": "pighub_1253",
+    "name": "达人猪2",
+    "description": "被装进宝石的珍稀猪",
+    "analysis": "你被安放在一颗紫色大宝石里，闪光灯一打，四只小猪崽围在底下仰望，活像抽卡的“SSR出货”现场。稀有度拉满，你就是猪圈里被供起来的那个“达人”。",
+    "image": "resource/pighub/1253.webp",
+    "source": "pighub",
+    "pighub_id": 1253
+  },
+  {
+    "id": "pighub_1277",
+    "name": "你们都聪明 只有我是笨蛋",
+    "description": "自嘲天花板",
+    "analysis": "你顶着一句“你们都聪明 只有我是笨蛋”，表情还特坦然。这不是认输，是看透——聪明猪忙着内卷，笨蛋猪忙着快乐，而你显然选对了路。",
+    "image": "resource/pighub/1277.webp",
+    "source": "pighub",
+    "pighub_id": 1277
+  },
+  {
+    "id": "pighub_1267",
+    "name": "护士小猪",
+    "description": "白衣天使猪",
+    "analysis": "你戴着白帽子、穿着护士服，一脸认真，像要上岗救死扶伤。只是你这医术嘛——打针是针灸，量体温是贴脸，喂药是……先自己尝一口。",
+    "image": "resource/pighub/1267.webp",
+    "source": "pighub",
+    "pighub_id": 1267
+  },
+  {
+    "id": "pighub_1254",
+    "name": "地大猪",
+    "description": "地质勘探系学猪",
+    "analysis": "你戴着黄色安全帽、扛着一把地质锤，一副“地大”勘探系的硬核派头。别看是猪，你锤子一挥，脚下的岩层都得给你报个身份——你是要挖矿，还是要挖铁矿啊。",
+    "image": "resource/pighub/1254.webp",
+    "source": "pighub",
+    "pighub_id": 1254
+  },
+  {
+    "id": "pighub_1266",
+    "name": "你们都聪明 只有我是笨蛋",
+    "description": "蜜汁自信",
+    "analysis": "你顶着一句“你们都是笨蛋 只有我聪明”，神情淡定得像在看戏。别人笑你狂妄，你说这叫自我认知清醒——在猪圈，觉得自己聪明，就是最大的聪明。",
+    "image": "resource/pighub/1266.webp",
+    "source": "pighub",
+    "pighub_id": 1266
+  },
+  {
+    "id": "pighub_1247",
+    "name": "吃了就睡睡了就吃",
+    "description": "快乐循环永动机",
+    "analysis": "你把“猪进食→猪睡觉”画成一个永动循环，还配了句“吃了就睡睡了就吃”。这不是懒，这是你给猪生定义的最优解——只要循环不停，幸福就不停。",
+    "image": "resource/pighub/1247.webp",
+    "source": "pighub",
+    "pighub_id": 1247
+  },
+  {
+    "id": "pighub_1272",
+    "name": "空白结局",
+    "description": "等了个寂寞",
+    "analysis": "你坐在空房间里，等啊等，什么也没发生，最后发现“原来这也算一天”。这种被世界遗忘的平静，被你品出了诗意——有时候，什么都没有，反而是最好的结局。",
+    "image": "resource/pighub/1272.webp",
+    "source": "pighub",
+    "pighub_id": 1272
+  },
+  {
+    "id": "pighub_1265",
+    "name": "哭哭猪",
+    "description": "泪腺发达",
+    "analysis": "你眼泪吧嗒吧嗒往下掉，哭得整张脸都花了，委屈得不行。能让猪哭成这样，不是饿了就是被欺负了——而你，两样都占了。",
+    "image": "resource/pighub/1265.webp",
+    "source": "pighub",
+    "pighub_id": 1265
+  },
+  {
+    "id": "pighub_1273",
+    "name": "扣帽子",
+    "description": "帽子说扣就扣",
+    "analysis": "你正往同伴头上扣一顶学士帽，而它头上早已摞了厚厚一叠帽子，眼睛都压成了叉。这就是“扣帽子”的威力——别人给你贴的标签，从来不用问你想不想接。",
+    "image": "resource/pighub/1273.webp",
+    "source": "pighub",
+    "pighub_id": 1273
+  },
+  {
+    "id": "pighub_1264",
+    "name": "酒鬼猪",
+    "description": "酒量一般，酒品更差",
+    "analysis": "你抱着“酒”字绿瓶子喝得东倒西歪，眼神都拧成了蚊香。旁边还摞着好几瓶，你嘴里嘟囔“再来一杯”，脚底下却已经打飘——酒鬼猪的名号，名不虚传。",
+    "image": "resource/pighub/1264.webp",
+    "source": "pighub",
+    "pighub_id": 1264
+  },
+  {
+    "id": "pighub_1260",
+    "name": "黑客猪",
+    "description": "键盘侠本侠",
+    "analysis": "你戴顶黑礼帽，坐在电脑前敲得飞快，屏幕上全是“access granted”“infiltrating system”的绿字，活脱脱一个黑客。可惜你黑遍全网的成果，不过是改了个“猪脸登录”的密码。",
+    "image": "resource/pighub/1260.webp",
+    "source": "pighub",
+    "pighub_id": 1260
+  },
+  {
+    "id": "pighub_1262",
+    "name": "开猪罐头",
+    "description": "真·猪罐头",
+    "analysis": "铁皮罐头一拉开，里面齐刷刷冒出两只猪，一只眼睛都成叉了还探出头。这“开猪罐头”开出的不是午餐，是沙丁鱼味的忧桑——谁把你装进去的，出来挨打。",
+    "image": "resource/pighub/1262.webp",
+    "source": "pighub",
+    "pighub_id": 1262
+  },
+  {
+    "id": "pighub_1258",
+    "name": "坏结局",
+    "description": "真心碎了一地",
+    "analysis": "你把珍藏的胡萝卜递过去，却被对方随手摔在地上，那声音要比摔碎萝卜还响。原来碎掉的不是萝卜，是你那颗扑通扑通的心——这坏结局，比被做成香肠还扎心。",
+    "image": "resource/pighub/1258.webp",
+    "source": "pighub",
+    "pighub_id": 1258
+  },
+  {
+    "id": "pighub_1256",
+    "name": "红包猪",
+    "description": "收包收到嘴软",
+    "analysis": "你顶着个大红包，两边贴着“顺风顺水顺财神”“朝朝暮暮有人疼”的红对子，还甜甜地说“谢谢老板的大猪包~”。收红包收到这份上，你已经是猪年最旺的那头了。",
+    "image": "resource/pighub/1256.webp",
+    "source": "pighub",
+    "pighub_id": 1256
+  },
+  {
+    "id": "pighub_1257",
+    "name": "🐖！（绘绘的里）",
+    "description": "被突脸整懵了",
+    "analysis": "你头顶突然弹出一只小猪和“！”号，整张脸瞬间被吓得挤成一团。这“绘绘的里”的突脸，比惊吓盒子还狠——你连反应都没来得及做，就成了表情包。",
+    "image": "resource/pighub/1257.webp",
+    "source": "pighub",
+    "pighub_id": 1257
+  },
+  {
+    "id": "pighub_1255",
+    "name": "交大猪",
+    "description": "戴安全帽的工科猪",
+    "analysis": "你戴着交大校徽的黄色安全帽，手里攥一把扳手，一副工科生准备开干的架势。修机器是你的强项，就是拧螺丝时老忍不住拿猪鼻子去闻——职业病。",
+    "image": "resource/pighub/1255.webp",
+    "source": "pighub",
+    "pighub_id": 1255
+  },
+  {
+    "id": "pighub_1251",
+    "name": "？！猪猪！？",
+    "description": "惊了，是猪猪",
+    "analysis": "一张猪脸怼到镜头前，配文“？！猪猪！？”念起来都带弹幕音效。你大概是第一次见到这么近的猪，瞳孔地震，连感叹号都打成双份——没错，就是你眼前这只。",
+    "image": "resource/pighub/1251.webp",
+    "source": "pighub",
+    "pighub_id": 1251
+  },
+  {
+    "id": "pighub_1249",
+    "name": "进化失败",
+    "description": "卡在加载里的猪",
+    "analysis": "你浑身像素化的马赛克都快糊住了，像进化进行到一半突然断网。别人进化是越变越强，你进化是越进越糊——这波“进化失败”，卡得很彻底。",
+    "image": "resource/pighub/1249.gif",
+    "source": "pighub",
+    "pighub_id": 1249
+  },
+  {
+    "id": "pighub_1248",
+    "name": "猪籽军舰",
+    "description": "寿司上的猪籽",
+    "analysis": "你被铺在黑漆漆的海苔上，头顶一排橙红的猪头，活像鲜虾籽军舰寿司。就是这颗“猪籽”有点活泛——筷子一夹，它还会哼两声。",
+    "image": "resource/pighub/1248.webp",
+    "source": "pighub",
+    "pighub_id": 1248
+  },
+  {
+    "id": "pighub_1246",
+    "name": "猪坐飞机",
+    "description": "驰骋蓝天的猪",
+    "analysis": "你稳稳坐在红白客机顶上，双手一摊，享受飞跃云层的感觉。别人坐飞机抢头等舱，你坐机顶——这视野，这风，这“猪生第一飞”，够你吹一整年。",
+    "image": "resource/pighub/1246.webp",
+    "source": "pighub",
+    "pighub_id": 1246
+  },
+  {
+    "id": "pighub_1244",
+    "name": "猪反转",
+    "description": "翻了个底朝天",
+    "analysis": "你整个猪四脚朝天翻过来，一脸“我是谁我在哪”。别人是人生反转，你是身体先反转——翻都翻了，索性躺平摆烂吧。",
+    "image": "resource/pighub/1244.webp",
+    "source": "pighub",
+    "pighub_id": 1244
+  },
+  {
+    "id": "pighub_1245",
+    "name": "猪钓猪",
+    "description": "钓的不是鱼，是自己",
+    "analysis": "你握着鱼竿，钩都甩出去了，脑补的却是一只猪——合着你钓了半天，是想钓自己。这叫“守猪待猪”，注定一场空，因为你压根不舍得下嘴。",
+    "image": "resource/pighub/1245.webp",
+    "source": "pighub",
+    "pighub_id": 1245
+  },
+  {
+    "id": "pighub_1201",
+    "name": "绷不猪了",
+    "description": "绷带叠满的社畜",
+    "analysis": "你浑身缠满绷带，还挂着一滴冷汗，嘴上刚想嘴硬，身体先卸了力。这四个字“绷不猪了”说得太准——你早就垮了，只是撑着没倒而已。",
+    "image": "resource/pighub/1201.webp",
+    "source": "pighub",
+    "pighub_id": 1201
+  },
+  {
+    "id": "pighub_1243",
+    "name": "猪的世界一直下雨",
+    "description": "emo的雨一直下",
+    "analysis": "你独自站在灰云底下，雨哗哗下个不停，眼泪也跟着掉。猪的世界一直下雨，是因为你把所有的委屈都攒在了心里——哭一场也好，反正没人看见。",
+    "image": "resource/pighub/1243.webp",
+    "source": "pighub",
+    "pighub_id": 1243
+  },
+  {
+    "id": "pighub_1242",
+    "name": "猪画画",
+    "description": "现实派灵魂画手",
+    "analysis": "你举着画笔、托着调色盘，画板上却是一只凶巴巴的猪，还配了句“别在这咕咕”。别人画画是艺术，你画画是吐槽——你是把心里话都画上墙了。",
+    "image": "resource/pighub/1242.webp",
+    "source": "pighub",
+    "pighub_id": 1242
+  },
+  {
+    "id": "pighub_1240",
+    "name": "猪冲榜（PJSK）",
+    "description": "肝到眼冒金星",
+    "analysis": "你一边灌着能量饮料，一边盯着彩钻，拼了命也要冲上那个榜单。眼睛都熬成了叉，你还在刷——别人冲榜靠手速，你冲榜靠“命”。",
+    "image": "resource/pighub/1240.webp",
+    "source": "pighub",
+    "pighub_id": 1240
+  },
+  {
+    "id": "pighub_1241",
+    "name": "猪过情人节",
+    "description": "玫瑰配成双",
+    "analysis": "你叼着一支红玫瑰，跟对面那只猪四目相对，空气里都是粉红泡泡。别的猪在吃狗粮，你们在发狗粮——猪过情人节，主打一个甜到发齁。",
+    "image": "resource/pighub/1241.webp",
+    "source": "pighub",
+    "pighub_id": 1241
+  },
+  {
+    "id": "pighub_1209",
+    "name": "苍猪乱华",
+    "description": "格斗必杀猪",
+    "analysis": "你一记“苍猪乱华”直接腾空翻砸，底下还贴着格斗游戏的搓招指令表。这哪是猪，这是一只自带连招表的格斗猪——只要肯搓，你就能把对手拱出屏幕。",
+    "image": "resource/pighub/1209.webp",
+    "source": "pighub",
+    "pighub_id": 1209
+  },
+  {
+    "id": "pighub_1197",
+    "name": "苯猪",
+    "description": "苯环上的淡定猪",
+    "analysis": "你稳稳站在苯环的六边形上，表情平静又自信，像在宣示主权。化学老师说你是芳香族的骄傲，你说你只想当个不反应的稳定分子——安静，就是你的芳香。",
+    "image": "resource/pighub/1197.webp",
+    "source": "pighub",
+    "pighub_id": 1197
+  },
+  {
+    "id": "pighub_1238",
+    "name": "猪下床",
+    "description": "起床困难户退役现场",
+    "analysis": "你挣扎着从蓝被窝里翻下来，前蹄找地，尾巴翘起，一脸“我才刚醒”。下床这动作你都做得这么费劲，可见“起床”对你来说有多反人类——不过总算，你下床了。",
+    "image": "resource/pighub/1238.webp",
+    "source": "pighub",
+    "pighub_id": 1238
+  },
+  {
+    "id": "pighub_1239",
+    "name": "猪约会",
+    "description": "这是心动的信号",
+    "analysis": "你举着玫瑰、旁边还飘着小爱心，跟另一只猪脸红心跳地对视，典型的高甜约会现场。别看是猪，谈恋爱照样一套一套——浪漫，从来跟物种无关。",
+    "image": "resource/pighub/1239.webp",
+    "source": "pighub",
+    "pighub_id": 1239
+  },
+  {
+    "id": "pighub_1236",
+    "name": "猪伤心哼！猪",
+    "description": "委屈到哼哼",
+    "analysis": "你眼泪哗哗，头上还挂着一滴汗，委屈得直哼哼。那句“猪伤心哼！猪”喊出了多少辛酸——谁让你又饿又被欺负，猪生太难了。",
+    "image": "resource/pighub/1236.webp",
+    "source": "pighub",
+    "pighub_id": 1236
+  },
+  {
+    "id": "pighub_1208",
+    "name": "程序猪",
+    "description": "格子衫码农",
+    "analysis": "你戴上黑框眼镜、套上格子衬衫，在笔记本前敲得噼里啪啦，妥妥一个资深码农。写代码是你的强项，就是提交前总忍不住往代码里塞个“猪”字当注释。",
+    "image": "resource/pighub/1208.webp",
+    "source": "pighub",
+    "pighub_id": 1208
+  },
+  {
+    "id": "pighub_1206",
+    "name": "超天猪",
+    "description": "二次元偶像猪",
+    "analysis": "你扎着双马尾、穿一身水手服，粉白色的头发还带着蝴蝶结，活像一个出道多年的V家偶像。别人追星，你直接把自己活成了偶像——就是走音的时候，会“哼”出猪叫。",
+    "image": "resource/pighub/1206.webp",
+    "source": "pighub",
+    "pighub_id": 1206
+  },
+  {
+    "id": "pighub_1237",
+    "name": "猪奶",
+    "description": "一对同款小可爱",
+    "analysis": "你一白一黑两只猪头凑在一起，像照镜子似的，说不出的cp感。名字叫“猪奶”，又软又甜——你俩往那一站，就是猪圈里最萌的双人组。",
+    "image": "resource/pighub/1237.webp",
+    "source": "pighub",
+    "pighub_id": 1237
+  },
+  {
+    "id": "pighub_1188",
+    "name": "不跟你玩了",
+    "description": "傲娇式撂挑子",
+    "analysis": "你鼓起脸，眼睛皱成两条纹，气鼓鼓地丢下一句“我不跟你玩了，哼~”。嘴上说绝交，尾巴却还翘着——你根本不是真生气，就是想让人哄。",
+    "image": "resource/pighub/1188.webp",
+    "source": "pighub",
+    "pighub_id": 1188
+  },
+  {
+    "id": "pighub_1234",
+    "name": "猪利猪",
+    "description": "经典猪味零食",
+    "analysis": "你被包装成“猪利猪”牌零食，躺在黑白奶油冰淇淋饼上，广告语写着“经典猪味”。这波是把你做成了自己的周边——甜是甜，就是有点舍不得下口。",
+    "image": "resource/pighub/1234.webp",
+    "source": "pighub",
+    "pighub_id": 1234
+  },
+  {
+    "id": "pighub_1235",
+    "name": "猪占领世界",
+    "description": "猪球崛起",
+    "analysis": "你威风凛凛地站在地球顶上，脚下整颗星球都是你的版图。口号就一句“猪占领世界”——别看是玩笑，等你吃饱喝足，这地球迟早要是你的。",
+    "image": "resource/pighub/1235.webp",
+    "source": "pighub",
+    "pighub_id": 1235
+  },
+  {
+    "id": "pighub_1196",
+    "name": "柴郡猪",
+    "description": "女仆装柴郡猪",
+    "analysis": "你一头的雾蓝色长发，配一身白围裙女仆装，活像一个带猫耳的柴郡猫转世成猪。别人笑你像猫，你说这叫“柴郡气质”——神秘、优雅，还会突然消失。",
+    "image": "resource/pighub/1196.webp",
+    "source": "pighub",
+    "pighub_id": 1196
+  },
+  {
+    "id": "pighub_1198",
+    "name": "澄闪猪咪(明日方舟)",
+    "description": "粉毛小法师",
+    "analysis": "你顶着粉色头发、戴着发带，手里还攥着一根法杖，活脱脱一个明日方舟里的小法师。技能一放，闪闪发光——就是吟唱到一半，会忍不住先“哼”一声。",
+    "image": "resource/pighub/1198.webp",
+    "source": "pighub",
+    "pighub_id": 1198
+  }
+]

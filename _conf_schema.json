@@ -1,0 +1,14 @@
+{
+    "at_view_pig": {
+        "description": "开启艾特他人查看每日小猪功能",
+        "hint": "是否允许通过艾特他人来查看对方的每日小猪，默认为关闭",
+        "type": "bool",
+        "default": false
+    },
+    "daily_draw_count": {
+        "description": "每人每日可抽取次数",
+        "hint": "每个用户每天最多可抽取的小猪数量，默认为 1 次",
+        "type": "int",
+        "default": 1
+    }
+}

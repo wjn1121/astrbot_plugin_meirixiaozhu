@@ -1,0 +1,10 @@
+name: astrbot_plugin_meirixiaozhu    # 插件标识符（英文，唯一），与仓库/文件夹名一致
+display_name: 每日小猪                # 插件名称，显示在 AstrBot 市场上
+author: wjn1121                       # 你的名字/ID
+version: 1.0.0                        # 语义化版本号
+desc: 抽取属于自己的每日小猪，本地素材 + PigHub 热度前100新图，附固定性格解析
+short_desc: 每日抽取专属小猪
+repo: https://github.com/wjn1121/astrbot_plugin_meirixiaozhu
+support_platforms:                    # 声明支持的平台（可选，写清楚方便用户筛选）
+  - aiocqhttp
+astrbot_version: ">=4.16"             # 兼容的 AstrBot 版本范围
