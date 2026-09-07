@@ -4,7 +4,7 @@
 
 [![AstrBot](https://img.shields.io/badge/AstrBot-%3E%3D4.16-blue)](https://github.com/AstrBotDevs/AstrBot)
 [![Platform](https://img.shields.io/badge/platform-QQ_(aiocqhttp)-green)](#)
-[![Version](https://img.shields.io/badge/version-1.0.0-orange)](metadata.yaml)
+[![Version](https://img.shields.io/badge/version-1.1.0-orange)](metadata.yaml)
 [![License](https://img.shields.io/badge/license-MIT-9cf)](LICENSE)
 [![Author](https://img.shields.io/badge/author-wjn1121-lightgrey)](https://github.com/wjn1121)
 
@@ -165,6 +165,11 @@ astrbot_plugin_meirixiaozhu/
 ---
 
 ## 🆕 更新日志
+
+### v1.1.0
+
+- 🎯 监听改为关键词包含触发（「今日小猪 / 每日小猪」均可，无需前缀）
+- 📝 完善 README 文档
 
 ### v1.0.0
 
