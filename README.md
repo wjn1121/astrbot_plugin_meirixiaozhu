@@ -210,6 +210,18 @@ A: 能，但因为两者都响应「今日小猪」，同一条消息可能被�
 
 ---
 
+## 🙏 来源与致谢
+
+本项目基于 [astrbot_plugin_rollpig](https://github.com/MegSopern/astrbot_plugin_rollpig) 二次开发：
+
+- **素材与数据**：`resource/image/`、`resource/font/`、`resource/pig.json` 来自原项目
+- **代码**：`main.py` 中的图片合成、抽卡与消息发送逻辑在原项目基础上修改
+- **上游**：原项目基于 [nonebot-plugin-rollpig](https://github.com/Bearlele/nonebot-plugin-rollpig) 改造
+
+感谢以上作者的付出。本项目遵循 MIT 协议，原始版权声明已保留于 [LICENSE](LICENSE)。
+
+---
+
 ## 📞 联系作者
 
 - **QQ 群**：1038882918
