@@ -1,5 +1,12 @@
-# 内部设计文档，不作为插件发布内容上传
+# 内部设计文档与重构方案，不作为插件发布内容上传
 DESIGN.md
+REFACTOR_PLAN.md
+
+# 本地协作记录
+.workbuddy/
+
+# 本地预览产物
+_preview/
 
 # Python 缓存
 __pycache__/

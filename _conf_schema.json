@@ -1,14 +1,187 @@
 {
-    "at_view_pig": {
-        "description": "开启艾特他人查看每日小猪功能",
-        "hint": "是否允许通过艾特他人来查看对方的每日小猪，默认为关闭",
-        "type": "bool",
-        "default": false
-    },
-    "daily_draw_count": {
-        "description": "每人每日可抽取次数",
-        "hint": "每个用户每天最多可抽取的小猪数量，默认为 1 次",
-        "type": "int",
-        "default": 1
-    }
+  "daily_draw_count": {
+    "description": "每人每日可抽取次数",
+    "hint": "每个用户每天最多可抽取的小猪数量，默认为 1 次；达到次数后当天不再抽取，0 点自动重置",
+    "type": "int",
+    "default": 1
+  },
+  "at_view_pig": {
+    "description": "开启艾特他人查看每日小猪功能",
+    "hint": "是否允许通过艾特他人来查看对方的每日小猪，默认为关闭；开启后一次只能艾特一个人，且不能查看管理员",
+    "type": "bool",
+    "default": false
+  },
+  "need_at": {
+    "description": "仅在艾特机器人时响应",
+    "hint": "开启后必须 @机器人 并带上触发词才会抽卡，避免群里聊天时被关键词误触发；默认关闭，直接发关键词即可",
+    "type": "bool",
+    "default": false
+  },
+  "trigger_keywords": {
+    "description": "抽卡触发词",
+    "hint": "多个词用逗号分隔，默认「今日小猪,每日小猪」；消息里包含任意一个就算触发，改完立即生效。留空表示任意消息都触发（配合上面的艾特开关可做成纯艾特触发）",
+    "type": "string",
+    "default": "今日小猪,每日小猪"
+  },
+  "help_keywords": {
+    "description": "帮助触发词",
+    "hint": "默认「帮助,菜单,help」；发「触发词 + 帮助」查看全部玩法说明，留空则关闭帮助",
+    "type": "string",
+    "default": "帮助,菜单,help"
+  },
+  "codex_keywords": {
+    "description": "图鉴触发词",
+    "hint": "默认「图鉴」；发「触发词 + 图鉴」查看收集进度，留空则关闭该入口（图鉴总开关仍需开启）",
+    "type": "string",
+    "default": "图鉴"
+  },
+  "rank_keywords": {
+    "description": "排行榜触发词",
+    "hint": "默认「排行,排名」；发「触发词 + 排行」查看本群榜单，加「欧气」看 SSR 数量",
+    "type": "string",
+    "default": "排行,排名"
+  },
+  "stats_keywords": {
+    "description": "猪池统计触发词",
+    "hint": "默认「池子,统计」；发「触发词 + 池子」查看猪圈规模与稀有度分布",
+    "type": "string",
+    "default": "池子,统计"
+  },
+  "sync_keywords": {
+    "description": "手动更新素材触发词",
+    "hint": "默认「更新素材,同步素材」；仅管理员可用，发一次立刻从 PigHub 扩充一批",
+    "type": "string",
+    "default": "更新素材,同步素材"
+  },
+  "rarity_enabled": {
+    "description": "启用稀有度分级",
+    "hint": "开启后每只小猪按 N/R/SR/SSR 分级，卡面配色与装饰随稀有度变化（约 45% / 33% / 17% / 5%）；关闭后统一使用灰色简洁卡面",
+    "type": "bool",
+    "default": true
+  },
+  "rarity_weight_n": {
+    "description": "N 档占比",
+    "hint": "按百分比分配每档小猪数量，三档之和的剩余部分自动留给 SSR，默认 45 / 33 / 17 / 5；改完立即重新分级，不影响已抽到的记录",
+    "type": "int",
+    "default": 45
+  },
+  "rarity_weight_r": {
+    "description": "R 档占比",
+    "hint": "R 档小猪所占百分比，默认 33",
+    "type": "int",
+    "default": 33
+  },
+  "rarity_weight_sr": {
+    "description": "SR 档占比",
+    "hint": "SR 档小猪所占百分比，默认 17；SSR 自动补足 100 减前三档之和",
+    "type": "int",
+    "default": 17
+  },
+  "pity_enabled": {
+    "description": "启用保底机制",
+    "hint": "开启后连续多次未抽到 SR 及以上时，下一次必定出 SR 或 SSR；关闭则纯随机",
+    "type": "bool",
+    "default": true
+  },
+  "pity_threshold": {
+    "description": "保底触发次数",
+    "hint": "连续多少次未抽到 SR 及以上后触发保底，默认为 10 次；仅在「启用保底机制」开启时生效",
+    "type": "int",
+    "default": 10
+  },
+  "codex_enabled": {
+    "description": "启用小猪图鉴",
+    "hint": "开启后可用「每日小猪 图鉴」查看个人收集进度，按稀有度分组展示已解锁与未解锁数量；加上稀有度名字（如「每日小猪 图鉴 SR」）可只看某一档",
+    "type": "bool",
+    "default": true
+  },
+  "rank_enabled": {
+    "description": "启用本群排行榜",
+    "hint": "开启后可用「每日小猪 排行」查看本群收集数排行，或「每日小猪 排行 欧气」查看 SSR 数量排行；仅统计当前群，私聊不生效",
+    "type": "bool",
+    "default": true
+  },
+  "rank_size": {
+    "description": "排行榜显示人数",
+    "hint": "本群排行榜最多显示多少人，默认为 10；建议不超过 20，避免消息过长被平台截断",
+    "type": "int",
+    "default": 10
+  },
+  "card_frame": {
+    "description": "卡面边框风格",
+    "hint": "rarity 按稀有度切换边框配色与装饰（推荐）；simple 统一使用灰色卡框；none 不画边框，只出白底图文",
+    "type": "string",
+    "options": [
+      "rarity",
+      "simple",
+      "none"
+    ],
+    "default": "rarity"
+  },
+  "auto_sync": {
+    "description": "自动从 PigHub 扩充小猪池",
+    "hint": "开启后插件加载时自动联网拉取 PigHub 新素材，之后按间隔轮询；动态素材存放在插件数据目录，不会增加插件体积。默认为开启",
+    "type": "bool",
+    "default": true
+  },
+  "sync_batch_size": {
+    "description": "每轮新增小猪数量",
+    "hint": "每次自动同步最多新增几只小猪，默认为 5；数字越大消耗的模型调用次数越多，设为 0 则完全停止自动扩充",
+    "type": "int",
+    "default": 5
+  },
+  "price_input_usd": {
+    "description": "输入 token 单价（美元/百万）",
+    "hint": "用于估算扩充素材的花费，默认按 DeepSeek Flash 非高峰输入价 0.15 填写；换用自己的模型时改成对应价格即可",
+    "type": "float",
+    "default": 0.15
+  },
+  "price_output_usd": {
+    "description": "输出 token 单价（美元/百万）",
+    "hint": "默认按 DeepSeek Flash 非高峰输出价 0.60 填写",
+    "type": "float",
+    "default": 0.6
+  },
+  "usd_cny": {
+    "description": "美元兑人民币汇率",
+    "hint": "面板里同时展示美元和人民币花费，默认 7.1",
+    "type": "float",
+    "default": 7.1
+  },
+  "sync_interval_hours": {
+    "description": "自动同步间隔（小时）",
+    "hint": "两次自动同步之间的间隔小时数，默认为 24 小时；插件每次重启会立即同步一轮",
+    "type": "int",
+    "default": 24
+  },
+  "max_pool_size": {
+    "description": "小猪池总数上限",
+    "hint": "内置与动态素材合计的最大数量，默认为 300；达到上限后不再自动新增，防止磁盘无限增长",
+    "type": "int",
+    "default": 300
+  },
+  "use_llm_persona": {
+    "description": "用模型生成小猪文案",
+    "hint": "开启后新素材的「一句钩子 + 性格解析」由当前对话模型生成；关闭则使用内置模板拼装。模型支持看图时会连同图片一起发送，文案更贴合画面",
+    "type": "bool",
+    "default": true
+  },
+  "allow_vision": {
+    "description": "允许把图片发送给模型",
+    "hint": "仅在模型声明支持图片输入时生效，用于让模型看图写文案；关闭后只把小猪标题发给模型，节省 token 但文案可能与图片对不上",
+    "type": "bool",
+    "default": true
+  },
+  "request_timeout": {
+    "description": "网络请求超时（秒）",
+    "hint": "拉取 PigHub 列表与下载图片的超时时间，默认为 15 秒；网络较慢时可调大",
+    "type": "int",
+    "default": 15
+  },
+  "debug_log": {
+    "description": "输出调试日志",
+    "hint": "开启后在日志中打印抽卡、稀有度判定、同步与文案生成的详细过程，排查问题时使用，平时建议关闭",
+    "type": "bool",
+    "default": false
+  }
 }

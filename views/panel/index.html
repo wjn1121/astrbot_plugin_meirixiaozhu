@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>每日小猪 · 控制台</title>
+<style>
+  :root {
+    --bg: #f6f5f3;
+    --panel: #ffffff;
+    --ink: #1f2328;
+    --ink-2: #5b6470;
+    --ink-3: #8a929e;
+    --line: #e6e3de;
+    --accent: #b4741e;
+    --accent-soft: #fdf4e6;
+    --ok: #16794a;
+    --danger: #b42318;
+    --radius: 12px;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 14px/1.65 -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 22px 20px 60px; }
+  .head { display: flex; align-items: baseline; gap: 10px; margin-bottom: 4px; }
+  .head h1 { font-size: 20px; margin: 0; letter-spacing: .3px; }
+  .head .ver { font-size: 12px; color: var(--ink-3); border: 1px solid var(--line); border-radius: 20px; padding: 1px 9px; background: #fff; }
+  .head .tip { margin-left: auto; font-size: 12.5px; color: var(--ink-3); }
+
+  .tabs { display: flex; gap: 4px; margin: 16px 0 18px; border-bottom: 1px solid var(--line); overflow-x: auto; }
+  .tabs button {
+    appearance: none; border: 0; background: none; cursor: pointer;
+    padding: 9px 15px; font-size: 14px; color: var(--ink-2);
+    border-bottom: 2px solid transparent; margin-bottom: -1px; white-space: nowrap;
+  }
+  .tabs button:hover { color: var(--ink); }
+  .tabs button.on { color: var(--accent); border-bottom-color: var(--accent); font-weight: 600; }
+
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px; }
+  .card + .card { margin-top: 14px; }
+  .card h3 { margin: 0 0 12px; font-size: 14px; font-weight: 600; }
+  .card h3 .sub { font-weight: 400; color: var(--ink-3); font-size: 12.5px; margin-left: 8px; }
+
+  .grid2 { display: grid; grid-template-columns: 330px minmax(0, 1fr); gap: 16px; align-items: start; }
+  .grid3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; }
+
+  .stat { border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; background: #fcfcfb; }
+  .stat .k { font-size: 12.5px; color: var(--ink-3); }
+  .stat .v { font-size: 20px; font-weight: 600; margin-top: 2px; }
+  .stat .m { font-size: 12px; color: var(--ink-3); margin-top: 3px; }
+
+  label.field { display: block; margin-bottom: 13px; }
+  label.field > span { display: block; font-size: 12.5px; color: var(--ink-2); margin-bottom: 5px; }
+  label.field .hint { display: block; font-size: 11.5px; color: var(--ink-3); margin-top: 4px; line-height: 1.5; }
+  input[type="number"], input[type="text"], select, textarea {
+    width: 100%; padding: 7px 10px; font: inherit; color: var(--ink);
+    border: 1px solid var(--line); border-radius: 8px; background: #fff; outline: none;
+  }
+  textarea { resize: vertical; min-height: 74px; line-height: 1.6; }
+  input:focus, select:focus, textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+  .row { display: flex; gap: 8px; }
+  .row > * { min-width: 0; }
+
+  .seg { display: inline-flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+  .seg button {
+    appearance: none; border: 0; background: #fff; cursor: pointer; font: inherit;
+    padding: 6px 13px; color: var(--ink-2); border-right: 1px solid var(--line);
+  }
+  .seg button:last-child { border-right: 0; }
+  .seg button.on { background: var(--accent-soft); color: var(--accent); font-weight: 600; }
+
+  .btn {
+    appearance: none; border: 1px solid var(--line); background: #fff; color: var(--ink);
+    padding: 7px 15px; border-radius: 8px; cursor: pointer; font: inherit;
+  }
+  .btn:hover { border-color: var(--accent); color: var(--accent); }
+  .btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .btn.primary:hover { opacity: .9; color: #fff; }
+  .btn.danger { color: var(--danger); border-color: #f0c8c4; }
+  .btn.danger:hover { background: #fdf2f1; border-color: var(--danger); }
+  .btn:disabled { opacity: .5; cursor: not-allowed; }
+
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th, td { text-align: left; padding: 9px 8px; border-bottom: 1px solid var(--line); vertical-align: middle; }
+  th { color: var(--ink-3); font-weight: 500; font-size: 12px; }
+  td.num { text-align: right; font-variant-numeric: tabular-nums; }
+  tbody tr:last-child td { border-bottom: 0; }
+  .bar { width: 110px; height: 6px; border-radius: 4px; background: #eeebe6; overflow: hidden; }
+  .bar > i { display: block; height: 100%; background: var(--accent); border-radius: 4px; }
+  .pct { font-size: 12px; color: var(--ink-3); margin-left: 8px; }
+  .purpose { color: var(--ink-3); font-size: 12.5px; }
+
+  .preview-box { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+  .preview-box img { max-width: 100%; border-radius: 10px; box-shadow: 0 6px 22px rgba(31,35,40,.12); }
+  .preview-meta { font-size: 12.5px; color: var(--ink-3); }
+
+  .pill { display: inline-block; font-size: 11.5px; padding: 1px 8px; border-radius: 20px; border: 1px solid var(--line); color: var(--ink-2); background: #fbfaf9; }
+  .pill.N { color: #667085; } .pill.R { color: #1d63c9; }
+  .pill.SR { color: #7a4bd0; } .pill.SSR { color: #b4741e; border-color: #f0d9b5; background: #fdf7ec; }
+
+  .msg { font-size: 13px; padding: 9px 12px; border-radius: 8px; margin-top: 12px; display: none; }
+  .msg.show { display: block; }
+  .msg.ok { background: #eef8f2; color: var(--ok); }
+  .msg.err { background: #fdf2f1; color: var(--danger); }
+  .msg.info { background: #f4f6fb; color: #35507f; }
+
+  .muted { color: var(--ink-3); font-size: 12.5px; }
+  .hidden { display: none !important; }
+  .danger-zone { border-color: #f0c8c4; }
+  .danger-zone h3 { color: var(--danger); }
+  .actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+  .scroll { max-height: 320px; overflow: auto; }
+  @media (max-width: 880px) { .grid2 { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="head">
+    <h1>每日小猪 · 控制台</h1>
+    <span class="ver" id="ver">v2.0.0</span>
+    <span class="tip">改动即时生效，无需重启</span>
+  </div>
+
+  <nav class="tabs">
+    <button data-tab="preview" class="on">外观预览</button>
+    <button data-tab="config">配置</button>
+    <button data-tab="expand">扩充猪池</button>
+    <button data-tab="storage">存储占用</button>
+    <button data-tab="data">数据管理</button>
+  </nav>
+
+  <!-- 外观预览 -->
+  <section id="tab-preview">
+    <div class="grid2">
+      <div>
+        <div class="card">
+          <h3>卡片设计器</h3>
+          <label class="field">
+            <span>稀有度</span>
+            <div class="seg" id="raritySeg">
+              <button data-r="N">N</button>
+              <button data-r="R">R</button>
+              <button data-r="SR">SR</button>
+              <button data-r="SSR" class="on">SSR</button>
+            </div>
+            <span class="hint">不确定选哪只时，按稀有度挑一只做示例</span>
+          </label>
+          <label class="field">
+            <span>边框风格</span>
+            <div class="seg" id="frameSeg">
+              <button data-f="rarity" class="on">按稀有度</button>
+              <button data-f="simple">简洁</button>
+              <button data-f="none">无边框</button>
+            </div>
+            <span class="hint">对应配置项 card_frame，这里改动不保存</span>
+          </label>
+          <label class="field">
+            <span>选择卡片</span>
+            <div class="row">
+              <input type="text" id="cardSearch" placeholder="搜索名字或编号" />
+              <select id="cardPick" style="max-width:150px"></select>
+            </div>
+            <span class="hint" id="cardCount">加载中…</span>
+          </label>
+        </div>
+
+        <div class="card">
+          <h3>卡片文案 <span class="sub">留空保存即恢复素材原文</span></h3>
+          <label class="field">
+            <span>显示名</span>
+            <input type="text" id="nameInput" maxlength="40" placeholder="输入新的名字" />
+            <span class="hint">抽卡与卡面标题都用这个名字</span>
+          </label>
+          <label class="field">
+            <span>一句话</span>
+            <input type="text" id="tagInput" maxlength="60" placeholder="标题下方那句钩子" />
+            <span class="hint" id="tagHint"></span>
+          </label>
+          <label class="field">
+            <span>描述</span>
+            <textarea id="personaInput" rows="4" maxlength="400" placeholder="卡面下方的性格解析"></textarea>
+            <span class="hint" id="personaHint"></span>
+          </label>
+          <div class="actions">
+            <button class="btn primary" id="textSave">保存文案</button>
+            <button class="btn" id="textReset">恢复原文案</button>
+          </div>
+          <div class="msg" id="nameMsg"></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>实时预览 <span class="sub" id="previewMeta"></span></h3>
+        <div class="preview-box">
+          <img id="previewImg" alt="卡面预览" class="hidden" />
+          <div class="preview-meta" id="previewHint">正在渲染…</div>
+        </div>
+        <div class="card" style="margin-top:14px;background:#fcfcfb">
+          <h3 style="margin-bottom:8px">当前卡片</h3>
+          <div class="grid3" style="grid-template-columns:repeat(2,1fr)">
+            <div><div class="muted">名称</div><div id="cTitle">-</div></div>
+            <div><div class="muted">稀有度</div><div id="cRarity">-</div></div>
+            <div><div class="muted">一句话</div><div id="cTag">-</div></div>
+            <div><div class="muted">体积</div><div id="cBytes">-</div></div>
+          </div>
+          <div style="margin-top:10px"><div class="muted">描述</div><div id="cPersona" style="font-size:13px;line-height:1.7">-</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 存储占用 -->
+  <section id="tab-storage" class="hidden">
+    <div class="grid3" id="storageCards"></div>
+    <div class="card" style="margin-top:14px">
+      <h3>占用明细 <span class="sub" id="storageDir"></span></h3>
+      <table>
+        <thead><tr><th>分区</th><th style="text-align:right">文件数</th><th style="text-align:right">占用</th><th style="width:190px">占比</th><th>用途</th></tr></thead>
+        <tbody id="storageRows"><tr><td colspan="5" class="muted">正在统计…</td></tr></tbody>
+      </table>
+    </div>
+    <div class="card">
+      <h3>猪池概况</h3>
+      <div class="grid3" id="poolCards"><div class="muted">加载中…</div></div>
+    </div>
+  </section>
+
+  <!-- 扩充猪池 -->
+  <section id="tab-expand" class="hidden">
+    <div class="grid2">
+      <div class="card">
+        <h3>从 PigHub 拉新</h3>
+        <label class="field">
+          <span>本次扩充数量</span>
+          <input type="number" id="expandCount" min="1" max="30" value="5" />
+          <span class="hint" id="expandRoom">每只猪都会调用一次模型看图写文案</span>
+        </label>
+        <button class="btn primary" id="expandBtn" style="width:100%">立即扩充</button>
+        <div class="msg" id="expandMsg"></div>
+      </div>
+      <div class="card">
+        <h3>花费估算 <span class="sub">按真实 token 用量统计</span></h3>
+        <div class="grid3" id="usageCards"><div class="muted">加载中…</div></div>
+        <div class="muted" id="usagePrice" style="margin-top:12px"></div>
+      </div>
+    </div>
+    <div class="card">
+      <h3>说明</h3>
+      <div class="muted" style="line-height:1.9">
+        每次扩充会从 PigHub 取一张新图，压缩后交给模型看图写一段文案。费用按「输入 token × 输入单价 + 输出 token × 输出单价」估算，
+        输入单价默认按 DeepSeek Flash 的未命中缓存价填写，实际命中缓存会更便宜。<br />
+        单价和汇率都能在「配置」里改；换成别的模型时把单价改成对应的价格即可。
+      </div>
+    </div>
+  </section>
+
+  <!-- 配置 -->
+  <section id="tab-config" class="hidden">
+    <div class="card">
+      <h3>插件配置 <span class="sub">保存后立即生效</span></h3>
+      <div id="configForm"><div class="muted">加载中…</div></div>
+      <div class="actions" style="margin-top:6px">
+        <button class="btn primary" id="configSave">保存配置</button>
+        <button class="btn" id="configReload">重新读取</button>
+      </div>
+      <div class="msg" id="configMsg"></div>
+    </div>
+  </section>
+
+  <!-- 数据管理 -->
+  <section id="tab-data" class="hidden">
+    <div class="grid3" id="dataCards"></div>
+    <div class="card" style="margin-top:14px">
+      <h3>扩充出来的小猪 <span class="sub" id="dynCount"></span></h3>
+      <div class="scroll">
+        <table>
+          <thead><tr><th>名字</th><th style="width:90px">稀有度</th><th style="width:110px">编号</th><th style="width:90px">操作</th></tr></thead>
+          <tbody id="dynRows"><tr><td colspan="4" class="muted">加载中…</td></tr></tbody>
+        </table>
+      </div>
+    </div>
+    <div class="card danger-zone">
+      <h3>清理与重置</h3>
+      <div class="muted" style="margin-bottom:12px">以下操作不可撤销，执行前会再确认一次。</div>
+      <div class="actions">
+        <button class="btn danger" data-act="clean_orphan">清理孤儿图片</button>
+        <button class="btn danger" data-act="clean_dynamic">清空动态图片缓存</button>
+        <button class="btn danger" data-act="reset_names">恢复全部原始名字</button>
+        <button class="btn danger" data-act="reset_texts">恢复全部原始文案</button>
+        <button class="btn danger" data-act="reset_pity">重置保底计数</button>
+        <button class="btn danger" data-act="reset_ledger">清空全部抽取记录</button>
+      </div>
+      <div class="msg" id="dataMsg"></div>
+    </div>
+  </section>
+</div>
+
+<script type="module">
+const bridge = window.AstrBotPluginView;
+const API = "panel";
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s == null ? "" : s).replace(/[&<>"']/g, (c) => (
+  {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+
+const state = { rarity: "SSR", frame: "rarity", pid: "", cards: [], loaded: {} };
+
+function toast(el, text, kind = "ok") {
+  el.textContent = text;
+  el.className = "msg show " + kind;
+  clearTimeout(el._t);
+  el._t = setTimeout(() => { el.className = "msg " + kind; }, 6000);
+}
+
+// ── Tabs ──────────────────────────────────────────────────
+document.querySelectorAll(".tabs button").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    document.querySelectorAll(".tabs button").forEach((b) => b.classList.toggle("on", b === btn));
+    const name = btn.dataset.tab;
+    for (const sec of document.querySelectorAll("section")) {
+      sec.classList.toggle("hidden", sec.id !== "tab-" + name);
+    }
+    loadTab(name);
+  });
+});
+
+function loadTab(name) {
+  if (state.loaded[name]) return;
+  state.loaded[name] = true;
+  if (name === "storage") loadStorage();
+  if (name === "expand") { loadUsage(); loadData(); }
+  if (name === "config") loadConfig();
+  if (name === "data") { loadData(); loadDynamicList(); }
+}
+
+// ── 外观预览 ──────────────────────────────────────────────
+async function loadCards() {
+  try {
+    const data = await bridge.apiGet(API + "/cards");
+    state.cards = data.items || [];
+    $("cardCount").textContent = `共 ${data.total} 只，列表按稀有度和名字排序`;
+    renderPick();
+    if (!state.pid && state.cards.length) pickByRarity();
+  } catch (e) {
+    $("cardCount").textContent = "卡片列表加载失败：" + e.message;
+  }
+}
+
+function renderPick() {
+  const kw = $("cardSearch").value.trim().toLowerCase();
+  const list = state.cards.filter((c) =>
+    !kw || c.title.toLowerCase().includes(kw) || c.pid.toLowerCase().includes(kw));
+  const sel = $("cardPick");
+  sel.innerHTML = list.slice(0, 200).map((c) =>
+    `<option value="${esc(c.pid)}">${esc(c.title)}${c.renamed ? " *" : ""}</option>`).join("");
+  if (list.some((c) => c.pid === state.pid)) sel.value = state.pid;
+  sel.dataset.count = String(list.length);
+}
+
+function pickByRarity() {
+  const hit = state.cards.find((c) => c.rarity === state.rarity);
+  if (hit) { state.pid = hit.pid; renderPreview(); }
+}
+
+async function renderPreview() {
+  if (!state.pid) return;
+  $("previewHint").textContent = "正在渲染…";
+  try {
+    const d = await bridge.apiGet(API + "/preview", { pid: state.pid, frame: state.frame });
+    $("previewImg").src = d.image;
+    $("previewImg").classList.remove("hidden");
+    $("previewHint").textContent = `${d.rarity} · ${(d.bytes / 1024).toFixed(0)} KB`;
+    $("previewMeta").textContent = d.renamed ? "已改过名字" : "";
+    $("cTitle").textContent = d.title;
+    $("cRarity").innerHTML = `<span class="pill ${esc(d.rarity)}">${esc(d.rarity)}</span>`;
+    $("cTag").textContent = d.tag || "-";
+    $("cBytes").textContent = (d.bytes / 1024).toFixed(0) + " KB";
+    $("cPersona").textContent = d.persona || "-";
+    $("nameInput").value = d.edited?.title ? d.title : "";
+    $("nameInput").placeholder = d.defaults?.title || d.title;
+    $("tagInput").value = d.edited?.tag ? d.tag : "";
+    $("tagInput").placeholder = d.defaults?.tag || "标题下方那句钩子";
+    $("tagHint").textContent = d.edited?.tag ? "已自定义，留空保存即恢复原文" : "";
+    $("personaInput").value = d.edited?.persona ? d.persona : "";
+    $("personaInput").placeholder = d.defaults?.persona || "卡面下方的性格解析";
+    $("personaHint").textContent = d.edited?.persona ? "已自定义，留空保存即恢复原文" : "";
+  } catch (e) {
+    $("previewHint").textContent = "渲染失败：" + e.message;
+  }
+}
+
+document.querySelectorAll("#raritySeg button").forEach((b) => {
+  b.addEventListener("click", () => {
+    document.querySelectorAll("#raritySeg button").forEach((x) => x.classList.toggle("on", x === b));
+    state.rarity = b.dataset.r;
+    state.pid = "";
+    pickByRarity();
+  });
+});
+document.querySelectorAll("#frameSeg button").forEach((b) => {
+  b.addEventListener("click", () => {
+    document.querySelectorAll("#frameSeg button").forEach((x) => x.classList.toggle("on", x === b));
+    state.frame = b.dataset.f;
+    renderPreview();
+  });
+});
+$("cardSearch").addEventListener("input", renderPick);
+$("cardPick").addEventListener("change", (e) => {
+  state.pid = e.target.value;
+  const hit = state.cards.find((c) => c.pid === state.pid);
+  if (hit) state.rarity = hit.rarity;
+  renderPreview();
+});
+async function saveText(reset) {
+  if (!state.pid) return;
+  const fields = reset
+    ? { title: "", tag: "", persona: "" }
+    : { title: $("nameInput").value, tag: $("tagInput").value, persona: $("personaInput").value };
+  try {
+    const d = await bridge.apiPost(API + "/text", { pid: state.pid, fields });
+    const label = reset ? "已恢复原文案" : (d.changed.length ? `已保存：${d.changed.join("、")}` : "没有检测到改动");
+    toast($("nameMsg"), label, d.changed.length || reset ? "ok" : "info");
+    state.cards = [];
+    await loadCards();
+    await renderPreview();
+  } catch (e) { toast($("nameMsg"), "保存失败：" + e.message, "err"); }
+}
+
+$("textSave").addEventListener("click", () => saveText(false));
+$("textReset").addEventListener("click", () => saveText(true));
+
+// ── 存储 ──────────────────────────────────────────────────
+async function loadStorage() {
+  try {
+    const d = await bridge.apiGet(API + "/storage");
+    if (d.version) $("ver").textContent = "v" + d.version;
+    $("storageDir").textContent = d.data_dir;
+    const z = Object.fromEntries(d.zones.map((x) => [x.key, x]));
+    $("storageCards").innerHTML = [
+      ["总占用", d.total, `${d.pool.total} 只小猪`],
+      ["SQLite 账本", z.ledger?.size ?? "-", `${d.ledger.rows} 条记录`],
+      ["动态图片", z.dynamic_img?.size ?? "-", `${z.dynamic_img?.files ?? 0} 张`],
+      ["内置素材", z.builtin_img?.size ?? "-", `${z.builtin_img?.files ?? 0} 张`],
+      ["字体", z.fonts?.size ?? "-", `${z.fonts?.files ?? 0} 个文件`],
+    ].map(([k, v, m]) => `<div class="stat"><div class="k">${esc(k)}</div><div class="v">${esc(v)}</div><div class="m">${esc(m)}</div></div>`).join("");
+
+    $("storageRows").innerHTML = d.zones.map((x) => `
+      <tr>
+        <td>${esc(x.label)}</td>
+        <td class="num">${x.files}</td>
+        <td class="num">${esc(x.size)}</td>
+        <td><div style="display:flex;align-items:center"><div class="bar"><i style="width:${Math.max(x.percent, 0.6)}%"></i></div><span class="pct">${x.percent}%</span></div></td>
+        <td class="purpose">${esc(x.purpose)}</td>
+      </tr>`).join("");
+
+    const w = d.pool.weights || [];
+    $("poolCards").innerHTML = ["N", "R", "SR", "SSR"].map((r, i) =>
+      `<div class="stat"><div class="k">${r} 档</div><div class="v">${d.pool.rarity[r] ?? 0} 只</div><div class="m">目标占比 ${w[i] ?? "-"}%</div></div>`).join("");
+  } catch (e) {
+    $("storageRows").innerHTML = `<tr><td colspan="5" class="muted">加载失败：${esc(e.message)}</td></tr>`;
+  }
+}
+
+// ── Token 用量 ────────────────────────────────────────────
+async function loadUsage() {
+  try {
+    const u = await bridge.apiGet(API + "/usage");
+    $("usageCards").innerHTML = [
+      ["累计调用", `${u.calls} 次`, "每只猪一次"],
+      ["输入 token", u.input_total, `平均 ${u.input_per_call} / 次`],
+      ["输出 token", u.output, `平均 ${u.output_per_call} / 次`],
+      ["累计花费", `¥${u.cny}`, `$${u.usd}`],
+    ].map(([k, v, m]) => `<div class="stat"><div class="k">${esc(k)}</div><div class="v">${esc(v)}</div><div class="m">${esc(m)}</div></div>`).join("");
+    $("usagePrice").textContent =
+      `按 输入 $${u.price_input_usd} / 输出 $${u.price_output_usd} 每百万 token、汇率 ${u.usd_cny} 计算。` +
+      (u.calls ? `最近平均每只约 ¥${u.per_call_cny}。` : "");
+  } catch (e) {
+    $("usageCards").innerHTML = `<div class="muted">用量读取失败：${esc(e.message)}</div>`;
+  }
+}
+
+// ── 扩充 ──────────────────────────────────────────────────
+$("expandBtn").addEventListener("click", async () => {
+  const btn = $("expandBtn");
+  const count = parseInt($("expandCount").value || "5", 10);
+  btn.disabled = true;
+  const old = btn.textContent;
+  btn.textContent = "扩充中…";
+  toast($("expandMsg"), "正在拉图并让模型写文案，请稍候（每只约 10 秒）", "info");
+  try {
+    const d = await bridge.apiPost(API + "/expand", { count });
+    toast($("expandMsg"),
+      `新增 ${d.added}/${d.requested} 只，猪池 ${d.pool} 只，耗时 ${d.elapsed}s；` +
+      `本次消耗 ${d.usage.input_total} 输入 / ${d.usage.output} 输出 token，约 ¥${d.cost_cny}`,
+      d.added > 0 ? "ok" : "err");
+    state.loaded.storage = false;
+    state.loaded.data = false;
+    state.cards = [];
+    await loadCards();
+    await loadUsage();
+  } catch (e) {
+    toast($("expandMsg"), "扩充失败：" + e.message, "err");
+  } finally {
+    btn.disabled = false;
+    btn.textContent = old;
+  }
+});
+
+// ── 配置 ──────────────────────────────────────────────────
+let CONF = { schema: {}, values: {} };
+
+async function loadConfig() {
+  try {
+    const d = await bridge.apiGet(API + "/config");
+    CONF = d;
+    renderConfig(d);
+  } catch (e) {
+    $("configForm").innerHTML = `<div class="muted">配置读取失败：${esc(e.message)}</div>`;
+  }
+}
+
+function renderConfig(d) {
+  const { schema, values, derived } = d;
+  const rows = [];
+  for (const [key, spec] of Object.entries(schema)) {
+    if (!spec || typeof spec !== "object") continue;
+    const label = esc(spec.description || key);
+    const hint = spec.hint ? `<span class="hint">${esc(spec.hint)}</span>` : "";
+    const val = values[key] ?? spec.default;
+    let input = "";
+
+    if (spec.type === "bool") {
+      input = `<label class="row" style="align-items:center;gap:8px">
+        <input type="checkbox" data-key="${esc(key)}" data-kind="bool" ${val ? "checked" : ""} style="width:16px;height:16px" />
+        <span class="muted" style="margin:0">${val ? "已开启" : "已关闭"}</span></label>`;
+    } else if (spec.type === "int" || spec.type === "float") {
+      const step = spec.type === "float" ? "0.01" : "1";
+      input = `<input type="number" step="${step}" data-key="${esc(key)}" data-kind="${spec.type}" value="${esc(val)}" />`;
+    } else if (Array.isArray(spec.options) && spec.options.length) {
+      input = `<select data-key="${esc(key)}" data-kind="string">${spec.options.map((o) =>
+        `<option value="${esc(o)}" ${String(val) === String(o) ? "selected" : ""}>${esc(o)}</option>`).join("")}</select>`;
+    } else {
+      input = `<input type="text" data-key="${esc(key)}" data-kind="string" value="${esc(val)}" />`;
+    }
+
+    const extra = key === "rarity_weight_sr"
+      ? `<span class="hint" id="ssrHint">SSR 自动补足 ${derived.rarity_ssr}%（四档合计 ${derived.rarity_total}%）</span>`
+      : "";
+    rows.push(`<label class="field">${label}${input}${hint}${extra}</label>`);
+  }
+  $("configForm").innerHTML = rows.join("");
+
+  const weightKeys = ["rarity_weight_n", "rarity_weight_r", "rarity_weight_sr"];
+  weightKeys.forEach((k) => {
+    const el = document.querySelector(`[data-key="${k}"]`);
+    if (el) el.addEventListener("input", updateSsrHint);
+  });
+  $("configForm").querySelectorAll('input[type="checkbox"]').forEach((el) => {
+    el.addEventListener("change", () => {
+      el.parentElement.querySelector(".muted").textContent = el.checked ? "已开启" : "已关闭";
+    });
+  });
+  updateSsrHint();
+}
+
+function updateSsrHint() {
+  const get = (k) => {
+    const el = document.querySelector(`[data-key="${k}"]`);
+    return el ? Math.max(0, parseInt(el.value || "0", 10) || 0) : 0;
+  };
+  const n = get("rarity_weight_n"), r = get("rarity_weight_r"), sr = get("rarity_weight_sr");
+  const sum = n + r + sr;
+  const ssr = sum >= 100 ? Math.max(0, 100 - Math.min(99, sum)) : 100 - sum;
+  const hint = $("ssrHint");
+  if (hint) {
+    hint.textContent = `SSR 自动补足 ${ssr}%（四档合计 ${n + r + sr + ssr}%）`
+      + (sum > 99 ? "，前三档已超过 100%，保存时会按比例压缩" : "");
+  }
+}
+
+$("configSave").addEventListener("click", async () => {
+  const values = {};
+  $("configForm").querySelectorAll("[data-key]").forEach((el) => {
+    const kind = el.dataset.kind;
+    let v = el.type === "checkbox" ? el.checked : el.value;
+    if (kind === "int") v = parseInt(v, 10) || 0;
+    if (kind === "float") v = parseFloat(v) || 0;
+    values[el.dataset.key] = v;
+  });
+  try {
+    const d = await bridge.apiPost(API + "/config", { values });
+    toast($("configMsg"), d.count ? `已保存 ${d.count} 项：${d.changed.join("、")}` : "没有检测到改动", d.count ? "ok" : "info");
+    state.loaded.storage = false;
+    await loadConfig();
+  } catch (e) {
+    toast($("configMsg"), "保存失败：" + e.message, "err");
+  }
+});
+$("configReload").addEventListener("click", () => loadConfig());
+
+// ── 数据管理 ──────────────────────────────────────────────
+async function loadData() {
+  try {
+    const d = await bridge.apiGet(API + "/data");
+    $("expandRoom").textContent = `当前猪池 ${d.pool} 只，上限 ${d.limits.max_pool_size}，还能加 ${d.limits.room} 只`;
+    $("dataCards").innerHTML = [
+      ["动态小猪", `${d.dynamic_pigs} 只`, "来自 PigHub"],
+      ["动态图片", d.dynamic_bytes, `${d.dynamic_images} 张`],
+      ["孤儿图片", `${d.orphan_images} 张`, d.orphan_images ? "没有卡片引用，可清理" : "没有多余文件"],
+      ["自定义命名", `${d.names} 只`, "改过名字的卡片"],
+      ["文案覆盖", `${d.texts ?? 0} 只`, "改过一句话或描述"],
+      ["抽取记录", `${d.ledger.rows} 条`, `${d.ledger.users} 位用户`],
+    ].map(([k, v, m]) => `<div class="stat"><div class="k">${esc(k)}</div><div class="v">${esc(v)}</div><div class="m">${esc(m)}</div></div>`).join("");
+    $("dynCount").textContent = `${d.dynamic_pigs} 只`;
+  } catch (e) {
+    $("dataCards").innerHTML = `<div class="muted">读取失败：${esc(e.message)}</div>`;
+  }
+}
+
+async function loadDynamicList() {
+  try {
+    const d = await bridge.apiGet(API + "/cards", { limit: 500 });
+    const dyn = (d.items || []).filter((x) => x.origin === "dynamic");
+    if (!dyn.length) {
+      $("dynRows").innerHTML = `<tr><td colspan="4" class="muted">还没有扩充过小猪</td></tr>`;
+      return;
+    }
+    $("dynRows").innerHTML = dyn.map((x) => `
+      <tr>
+        <td>${esc(x.title)}${x.renamed ? ' <span class="pill">已改名</span>' : ""}</td>
+        <td><span class="pill ${esc(x.rarity)}">${esc(x.rarity)}</span></td>
+        <td class="muted">${esc(x.pid)}</td>
+        <td><button class="btn danger" data-del="${esc(x.pid)}" style="padding:3px 10px;font-size:12px">删除</button></td>
+      </tr>`).join("");
+    $("dynRows").querySelectorAll("[data-del]").forEach((btn) => {
+      btn.addEventListener("click", async () => {
+        const pid = btn.dataset.del;
+        if (!confirm(`确定删除 ${pid} 吗？会同时删掉它的图片文件。`)) return;
+        try {
+          const r = await bridge.apiPost(API + "/data", { action: "delete_pig", pid });
+          toast($("dataMsg"), `已删除，猪池剩 ${r.pool} 只`, "ok");
+          state.cards = []; state.pid = "";
+          await loadData(); await loadDynamicList(); await loadCards();
+        } catch (e) { toast($("dataMsg"), "删除失败：" + e.message, "err"); }
+      });
+    });
+  } catch (e) {
+    $("dynRows").innerHTML = `<tr><td colspan="4" class="muted">加载失败：${esc(e.message)}</td></tr>`;
+  }
+}
+
+const ACT_TEXT = {
+  clean_orphan: "删掉没有被任何卡片引用的图片文件？这些通常是同步中断留下的残留。",
+  clean_dynamic: "清空所有扩充出来的小猪和图片？内置的 150 只不受影响，但已抽到的记录会指向不存在的卡片。",
+  reset_names: "把所有改过名字的卡片恢复成原始名字？",
+  reset_texts: "把所有改过的一句话和描述恢复成素材原文？",
+  reset_pity: "把所有人的保底计数清零？",
+  reset_ledger: "清空全部抽取记录？图鉴、排行、每日次数都会从零开始，此操作不可恢复。",
+};
+document.querySelectorAll("[data-act]").forEach((btn) => {
+  btn.addEventListener("click", async () => {
+    const act = btn.dataset.act;
+    if (!confirm(ACT_TEXT[act] || "确定执行？")) return;
+    try {
+      const r = await bridge.apiPost(API + "/data", { action: act });
+      const label = act === "clean_dynamic" ? `已清空，猪池剩 ${r.pool} 只`
+        : act === "clean_orphan" ? `已删除 ${r.removed} 张孤儿图片`
+        : `已执行，影响 ${r.removed} 条`;
+      toast($("dataMsg"), label, "ok");
+      state.cards = []; state.pid = "";
+      state.loaded.storage = false;
+      await loadData(); await loadDynamicList(); await loadCards();
+    } catch (e) { toast($("dataMsg"), "执行失败：" + e.message, "err"); }
+  });
+});
+
+// ── 启动 ──────────────────────────────────────────────────
+async function syncVersion() {
+  try {
+    const d = await bridge.apiGet(API + "/storage");
+    if (d.version) $("ver").textContent = "v" + d.version;
+  } catch (e) { /* 版本号取不到不影响使用 */ }
+}
+
+await bridge.ready();
+syncVersion();
+loadCards();
+</script>
+</body>
+</html>
