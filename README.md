@@ -13,6 +13,8 @@
 [![Downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fcloud.astrbot.app%2Fapi%2Fv1%2Fmarket%2Fplugins.json&query=$%5B%27wjn1121%2Fastrbot_plugin_meirixiaozhu%27%5D.download_count&label=downloads&color=green&suffix=%E6%AC%A1&cacheSeconds=3600)](https://cloud.astrbot.app/market)
 [![License](https://img.shields.io/badge/license-MIT-9cf)](LICENSE)
 
+<p align="center"><img src="docs/preview.webp" alt="N / R / SR / SSR 四档卡面预览" width="100%"></p>
+
 ---
 
 ## ⚡ 快速开始
@@ -24,6 +26,8 @@
 不需要 `/` 指令、不需要 @机器人、不需要任何 API Key。内置 150 只小猪，装完即可抽。
 
 想改触发词、要求必须 @机器人、调整稀有度概率、改卡片文案，进 WebUI 的「每日小猪」控制台即可，改完即时生效。
+
+QQ、Telegram、Discord、飞书、企业微信、钉钉都能装，只在群聊里响应。
 
 ---
 
@@ -38,10 +42,10 @@
 - 🌐 **联网扩充**：自动从 PigHub 拉新图，并用当前模型看图写文案
 - 🗝️ **关键词全可配**：抽卡 / 帮助 / 图鉴 / 排行 / 池子 / 更新素材六组触发词，都能在控制台里改
 - 🔔 **艾特唤醒开关**：可要求必须 @机器人 才响应，避免群聊误触发
+- 👥 **艾特查看**：`每日小猪 @某人` 看对方今天的小猪；对方还没抽的话会自动帮他抽一只
 - ✏️ **卡片文案可改**：显示名、一句话、描述都能在控制台里改，留空即恢复原文
 - 🖥️ **控制台五合一**：外观预览 / 配置 / 扩充猪池 / 存储占用 / 数据管理，全部热改
 - 🔤 **缺字自动回退**：字体子集外的生僻字自动切换备用字体，不会出现方块
-- 👥 **艾特查看**：`每日小猪 @某人` 看对方今天的小猪；对方还没抽的话会自动帮他抽一只
 - 🛡️ **降级容错**：图片缺失、渲染失败、发送失败均自动降级为纯文本，不崩
 
 ---
@@ -85,6 +89,8 @@
 - QQ（aiocqhttp）、Telegram、Discord、飞书、企业微信、钉钉、QQ 官方机器人都能跑；发卡走平台无关的消息链，QQ 之外的平台若不适配艾特段，`@某人` 会退化成看自己，其余玩法不受影响
 - 上表的关键词全部可在控制台「配置」里改，改完立即生效，不需要重启
 - 触发词留空 = 任意消息都算（配合艾特开关可做成「只有 @我 才抽」）
+- `@某人` 一次只能艾特一个人，管理员的小猪看不了
+- 被艾特的人今天还没抽的话，会替他抽一只，消耗的是**对方的**次数，不是你自己的
 
 ---
 
@@ -231,6 +237,7 @@ astrbot_plugin_meirixiaozhu/
 │   └── webui.py             # 控制台后端接口
 ├── views/panel/index.html   # 控制台（五个标签页共用一页）
 ├── .astrbot-plugin/i18n/    # 页面标题的多语言条目
+├── docs/preview.webp        # 本文开头的卡面预览图，不参与运行
 ├── tools/                   # 构建期脚本，不参与运行
 │   ├── build_fonts.py       # 字体子集化
 │   ├── build_catalog.py     # 素材拉取与猪库生成
@@ -249,6 +256,7 @@ astrbot_plugin_meirixiaozhu/
 ## 🔧 技术实现
 
 - **关键词判定在处理器内**：装饰器上挂 `@filter.regex(r"[\s\S]+")`，真正的匹配在 `on_trigger` 里按配置做，所以改关键词立即生效、原生配置页改也生效，且不消耗 LLM token
+- **平台无关发送**：处理器不绑适配器，出卡走 `event.chain_result()`，换平台不用改代码
 - **图像不落盘**：卡面渲染直接输出 `bytes`，通过 `Comp.Image.fromBytes()` 发送
 - **CPU 密集转线程**：渲染走 `asyncio.to_thread()`，不阻塞事件循环
 - **sqlite 账本**：单文件记录，支持按群聚合排行
@@ -263,6 +271,7 @@ astrbot_plugin_meirixiaozhu/
 |------|------|
 | AstrBot | ≥ 4.16（可视化控制台需要） |
 | 平台 | QQ（aiocqhttp / 官方机器人）、Telegram、Discord、飞书、企业微信、钉钉 |
+| 聊天类型 | 仅群聊，私聊不响应 |
 | Python | ≥ 3.10（随 AstrBot 环境） |
 
 ---
@@ -302,6 +311,14 @@ A: 说明该字符不在子集字体里且回退失败。请在 issue 里贴出�
 **Q: 能和 rollpig（今日小猪）一起用吗？**
 
 A: 能，但两个都响应「今日小猪」时会各回一张卡。现在不用改代码了：把本插件的 `trigger_keywords` 改成别的词（或反过来改它），或者只启用其中一个。
+
+**Q: 升级到 2.0.1 之后，`每日小猪 @某人` 没反应？**
+
+A: 2.0.1 把艾特查看改成了默认开启，但改的是「新装的默认值」。老版本早把 `at_view_pig: false` 写进了配置文件，升级后仍按 false 走。去控制台「配置」页把开关打开一次就行。
+
+**Q: 在 Telegram / Discord 上 @ 人没反应？**
+
+A: 有些适配器不产出 At 消息段，插件拿不到被艾特者的 ID，这时 `@某人` 会退化成「看自己」。抽卡、图鉴、排行、帮助都不受影响。
 
 **Q: 从旧版本升级会丢数据吗？**
 
