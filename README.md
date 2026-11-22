@@ -1,12 +1,14 @@
-# 🐷 每日小猪 — AstrBot QQ 群聊插件
+# 🐷 每日小猪 — AstrBot 群聊抽卡插件
 
 > 群友发一句 `今日小猪`，机器人随机抽一只专属小猪，合成一张**带稀有度边框的卡牌**：插画 + 名字 + 一句钩子 + 性格解析。
 >
 > 四档稀有度、保底、图鉴、本群排行榜、联网扩充素材，全部自带；关键词、概率、卡面文案都能在控制台里热改，不用重启。
 
+一句话：给群聊装一个「每日一抽」的收集玩法。每人每天抽一只小猪，卡片按 N / R / SR / SSR 分稀有度，抽到的会累计成个人图鉴和群内排行榜。不需要 API Key，装完就有一百多只现成素材能抽，群里艾特别人还能看对方今天抽到了什么。
+
 [![AstrBot](https://img.shields.io/badge/AstrBot-%3E%3D4.16-blue)](https://github.com/AstrBotDevs/AstrBot)
-[![Platform](https://img.shields.io/badge/platform-QQ_(aiocqhttp)-green)](#)
-[![Version](https://img.shields.io/badge/version-2.0.0-orange)](metadata.yaml)
+[![Platform](https://img.shields.io/badge/platform-QQ%20%7C%20Telegram%20%7C%20Discord-green)](#)
+[![Version](https://img.shields.io/badge/version-2.0.1-orange)](metadata.yaml)
 [![Stars](https://img.shields.io/github/stars/wjn1121/astrbot_plugin_meirixiaozhu?label=stars&color=yellow)](https://github.com/wjn1121/astrbot_plugin_meirixiaozhu/stargazers)
 [![Downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fcloud.astrbot.app%2Fapi%2Fv1%2Fmarket%2Fplugins.json&query=$%5B%27wjn1121%2Fastrbot_plugin_meirixiaozhu%27%5D.download_count&label=downloads&color=green&suffix=%E6%AC%A1&cacheSeconds=3600)](https://cloud.astrbot.app/market)
 [![License](https://img.shields.io/badge/license-MIT-9cf)](LICENSE)
@@ -39,7 +41,7 @@
 - ✏️ **卡片文案可改**：显示名、一句话、描述都能在控制台里改，留空即恢复原文
 - 🖥️ **控制台五合一**：外观预览 / 配置 / 扩充猪池 / 存储占用 / 数据管理，全部热改
 - 🔤 **缺字自动回退**：字体子集外的生僻字自动切换备用字体，不会出现方块
-- 👥 **艾特查看**（可选）：`每日小猪 @某人` 看对方今天抽到的小猪
+- 👥 **艾特查看**：`每日小猪 @某人` 看对方今天的小猪；对方还没抽的话会自动帮他抽一只
 - 🛡️ **降级容错**：图片缺失、渲染失败、发送失败均自动降级为纯文本，不崩
 
 ---
@@ -72,14 +74,15 @@
 | `每日小猪 排行` | 本群收集数排行榜 |
 | `每日小猪 排行 欧气` | 本群 SSR 数量排行榜 |
 | `每日小猪 池子` | 当前猪圈规模与稀有度分布 |
-| `每日小猪 @某人` | 看对方今天抽到的小猪（需开 `at_view_pig`） |
+| `每日小猪 @某人` | 看对方今天的小猪，没抽则自动帮 TA 抽一只 |
 | `每日小猪 更新素材` | 立刻从 PigHub 扩充一批（仅管理员） |
 | `每日小猪 帮助` | 全部玩法一览 + 当前档位状态 |
 
 几条说明：
 
 - 默认只认包含「今日小猪」或「每日小猪」的消息，单独说「小猪」「猪」不会误触发
-- 生效范围仅 **QQ 群聊**（aiocqhttp 适配器）
+- 默认只在**群聊**里生效，私聊不响应
+- QQ（aiocqhttp）、Telegram、Discord、飞书、企业微信、钉钉、QQ 官方机器人都能跑；发卡走平台无关的消息链，QQ 之外的平台若不适配艾特段，`@某人` 会退化成看自己，其余玩法不受影响
 - 上表的关键词全部可在控制台「配置」里改，改完立即生效，不需要重启
 - 触发词留空 = 任意消息都算（配合艾特开关可做成「只有 @我 才抽」）
 
@@ -94,7 +97,7 @@
 | 配置项 | 类型 | 默认 | 说明 |
 |--------|------|:----:|------|
 | `daily_draw_count` | 整数 | 1 | 每人每日抽取次数 |
-| `at_view_pig` | 开关 | 关 | 允许艾特他人查看 |
+| `at_view_pig` | 开关 | 开 | 允许艾特他人查看；对方当天没抽会自动帮抽，次数记在对方头上 |
 | `need_at` | 开关 | 关 | 必须 @机器人 才响应 |
 | `trigger_keywords` | 文本 | `今日小猪,每日小猪` | 抽卡触发词，留空=任意消息 |
 | `help_keywords` | 文本 | `帮助,菜单,help` | 帮助触发词，留空=关闭 |
@@ -259,27 +262,14 @@ astrbot_plugin_meirixiaozhu/
 | 项目 | 要求 |
 |------|------|
 | AstrBot | ≥ 4.16（可视化控制台需要） |
-| 平台 | QQ（aiocqhttp 适配器） |
+| 平台 | QQ（aiocqhttp / 官方机器人）、Telegram、Discord、飞书、企业微信、钉钉 |
 | Python | ≥ 3.10（随 AstrBot 环境） |
 
 ---
 
 ## 🆕 更新日志
 
-### v2.0.0
-
-- 🎴 **卡面**：960×1200 竖版卡牌，N/R/SR/SSR 四档边框与装饰，SSR 带彩虹全息
-- ♻️ **架构**：分层模块包 + sqlite 账本，插件体积约 7MB
-- 📦 **素材**：内置 150 只，图片本地压缩为 WebP，文案逐只撰写
-- 🔤 **字体**：站酷庆科黄油体 + 霞鹜漫黑（均为 OFL-1.1），子集化后 4MB
-- ✨ **玩法**：稀有度分级、保底、图鉴、本群排行榜、联网自动扩充
-- 🗝️ **关键词全可配**：六组触发词面板可改，改完即时生效
-- 🔔 **艾特唤醒开关**：可要求必须 @机器人 才响应
-- 🆘 **帮助指令**：一条消息列出全部玩法与当前状态
-- ✏️ **文案热改**：显示名、一句话、描述都能在控制台改，留空恢复原文
-- 🖥️ **控制台五合一**：外观预览 / 配置 / 扩充猪池 / 存储占用 / 数据管理
-- 🔁 **次数用完也出卡**：重发当天最后一只并说明次数已用完
-- 🐛 **稳健性**：标题裁切、缺字方块、留白过多、首轮同步抢跑、每轮数量不生效、中断丢进度、重启重复扩充
+版本变更统一记在 [CHANGELOG.md](CHANGELOG.md)。当前版本 2.0.1，主要改动：艾特别人看小猪时对方没抽会自动帮抽。
 
 ---
 

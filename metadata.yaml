@@ -1,10 +1,16 @@
 name: astrbot_plugin_meirixiaozhu    # 插件标识符（英文，唯一），与仓库/文件夹名一致
 display_name: 每日小猪（抽卡）        # 插件名称，显示在 AstrBot 市场上
 author: wjn1121                       # 你的名字/ID
-version: 2.0.0                        # 语义化版本号
-desc: 抽取属于自己的每日小猪，稀有度卡面 + 图鉴排行 + 关键词与艾特唤醒可热改
-short_desc: 每日抽取专属小猪
+version: 2.0.1                        # 语义化版本号
+desc: 每日抽卡小猪；群聊抽卡收集；N/R/SR/SSR 稀有度卡面；图鉴、保底与本群排行榜；艾特看别人的猪；关键词可热改
+short_desc: 每日抽取专属小猪，稀有度卡面与图鉴排行
 repo: https://github.com/wjn1121/astrbot_plugin_meirixiaozhu
 support_platforms:                    # 声明支持的平台（可选，写清楚方便用户筛选）
   - aiocqhttp
+  - qq_official
+  - telegram
+  - discord
+  - lark
+  - wecom
+  - dingtalk
 astrbot_version: ">=4.16"             # 兼容的 AstrBot 版本范围

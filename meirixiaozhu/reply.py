@@ -43,6 +43,9 @@ def _headline(outcome: DrawOutcome) -> str:
     if outcome.exhausted:
         # 次数用完时重发今天的最后一只，前缀直接说明原因，避免「只回一句没有卡」
         return f" 今日抽取次数已用完（{outcome.used}/{outcome.limit}），这是你今天抽到的小猪："
+    if outcome.for_user and outcome.auto_drawn:
+        # 艾特的人今天还没抽，替他抽了一只，次数记在他头上
+        return f" TA 今天还没抽，帮着抽了一只（{pig.rarity}）："
     if outcome.for_user:
         base = f" TA 今天抽到的是（{pig.rarity}）："
     elif pig.rarity == "SSR":

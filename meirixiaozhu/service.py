@@ -26,6 +26,7 @@ class DrawOutcome:
     pity_streak: int = 0         # 当前连续未出高稀有的次数
     for_user: str | None = None  # 艾特查看时的目标用户
     exhausted: bool = False      # 次数已用完，重发的是今天最后一只
+    auto_drawn: bool = False     # 艾特查看时对方还没抽，这次是替他抽的
 
     @property
     def remaining(self) -> int:
@@ -203,7 +204,7 @@ def help_lines(cfg: Settings) -> list[str]:
 
     if cfg.at_view_pig:
         lines.append(f"看猪　{lead} @某人")
-        lines.append("　　　看对方今天抽到的小猪")
+        lines.append("　　　看对方今天的小猪，没抽会自动帮 TA 抽一只")
 
     if cfg.help_keywords:
         lines.append(f"帮助　{lead} {cfg.help_keywords[0]}")

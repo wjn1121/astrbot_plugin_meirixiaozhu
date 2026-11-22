@@ -43,7 +43,7 @@ PLUGIN_NAME = "astrbot_plugin_meirixiaozhu"
 TRIGGER_FILTER = r"[\s\S]+"
 
 
-@register(PLUGIN_NAME, "wjn1121", "抽取属于自己的每日小猪，卡面按稀有度变化", "2.0.0")
+@register(PLUGIN_NAME, "wjn1121", "抽取属于自己的每日小猪，卡面按稀有度变化", "2.0.1")
 class MeiRiXiaoZhuPlugin(Star):
     def __init__(self, context: Context, config: AstrBotConfig):
         super().__init__(context)
@@ -121,7 +121,6 @@ class MeiRiXiaoZhuPlugin(Star):
     # ── 指令入口 ────────────────────────────────────────────
     @filter.regex(TRIGGER_FILTER)
     @filter.event_message_type(filter.EventMessageType.GROUP_MESSAGE)
-    @filter.platform_adapter_type(filter.PlatformAdapterType.AIOCQHTTP)
     async def on_trigger(self, event: AstrMessageEvent):
         text = (event.message_str or "").strip()
         cfg = self._cfg()
@@ -171,10 +170,34 @@ class MeiRiXiaoZhuPlugin(Star):
 
         if target and target != sender:
             pig = self.service.peek_other(target, day)
+            used, limit, auto = 0, cfg.daily_draw_count, False
+
             if pig is None:
-                await event.send(event.plain_result("TA 今天还没抽过小猪。"))
+                # 对方今天还没抽：替他抽一次，次数记在他自己头上
+                name = self._target_name(event, target)
+                drawn = self.service.draw(cfg, target, name, group_id, day)
+                if isinstance(drawn, Refusal):
+                    await event.send(event.plain_result(drawn.text))
+                    return
+                if isinstance(drawn, Exhausted):
+                    # 账本当天有记录却取不到最后一只，极少见，按查看处理
+                    pig = drawn.pig
+                    used, limit = drawn.used, drawn.limit
+                else:
+                    pig = drawn.pig
+                    used, limit, auto = drawn.used, drawn.limit, True
+
+            if pig is None:
+                await event.send(event.plain_result("TA 今天的小猪没能取出来，稍后再试～"))
                 return
-            outcome = DrawOutcome(pig=pig, used=0, limit=cfg.daily_draw_count, for_user=target)
+
+            outcome = DrawOutcome(
+                pig=pig,
+                used=used,
+                limit=limit,
+                for_user=target,
+                auto_drawn=auto,
+            )
             await self._deliver(event, cfg, outcome, mention_id=sender)
             return
 
@@ -218,6 +241,16 @@ class MeiRiXiaoZhuPlugin(Star):
         if at_ids[0] in admins:
             return Refusal("这只猪不能随便看。")
         return at_ids[0]
+
+    @staticmethod
+    def _target_name(event: AstrMessageEvent, target: str) -> str:
+        """取被艾特者的昵称，用于替抽时写进账本；At 段没带名字就退回 QQ 号。"""
+        for seg in event.get_messages():
+            if isinstance(seg, At) and str(seg.qq) == target:
+                name = str(getattr(seg, "name", "") or "").strip()
+                if name:
+                    return name
+        return target
 
     async def _deliver(
         self,

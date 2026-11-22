@@ -72,7 +72,7 @@ class Settings:
     """一次抽卡期间使用的配置快照。"""
 
     daily_draw_count: int = 1
-    at_view_pig: bool = False
+    at_view_pig: bool = True
     need_at: bool = False
 
     trigger_keywords: tuple[str, ...] = DEFAULT_KEYWORDS["trigger_keywords"]
@@ -183,7 +183,7 @@ class Settings:
 
         return cls(
             daily_draw_count=_int("daily_draw_count"),
-            at_view_pig=_bool("at_view_pig", False),
+            at_view_pig=_bool("at_view_pig", True),
             need_at=_bool("need_at", False),
             trigger_keywords=_keys("trigger_keywords"),
             help_keywords=_keys("help_keywords"),
